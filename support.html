@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TheAce — Support</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0A0F0D; color: #D9EDE4; font-family: 'Barlow', sans-serif; font-size: 15px; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+header { padding: 20px 40px; border-bottom: 1px solid #1F2B25; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; position: sticky; top: 0; background: #0A0F0D; z-index: 100; }
+.logo-wrap { display: flex; flex-direction: column; }
+.logo { font-family: 'Barlow', sans-serif; font-weight: 900; font-style: italic; font-size: 22px; color: #C4FF47; letter-spacing: 1px; }
+.logo-sub { font-size: 11px; color: #2E4039; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; }
+.lang-switcher { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.lang-btn { padding: 5px 10px; font-family: 'Barlow', sans-serif; font-size: 11px; letter-spacing: 0.05em; background: transparent; border: 1px solid #1F2B25; color: #4a6557; cursor: pointer; border-radius: 2px; transition: all 0.15s; white-space: nowrap; }
+.lang-btn:hover { border-color: #C4FF47; color: #C4FF47; }
+.lang-btn.active { background: #C4FF47; border-color: #C4FF47; color: #0A0F0D; font-weight: 700; }
+main { flex: 1; max-width: 600px; margin: 0 auto; padding: 64px 40px; width: 100%; }
+.content { display: none; }
+.content.active { display: block; }
+.page-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #C4FF47; margin-bottom: 12px; }
+h1 { font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 30px; color: #fff; margin-bottom: 12px; line-height: 1.2; }
+.intro { font-size: 15px; color: #6B8A79; margin-bottom: 40px; line-height: 1.7; }
+.contact-card { background: #111714; border: 1px solid #1F2B25; border-left: 3px solid #C4FF47; padding: 24px 28px; margin-bottom: 24px; }
+.contact-card h2 { font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #C4FF47; margin-bottom: 8px; }
+.contact-card p { font-size: 14px; color: #6B8A79; margin-bottom: 10px; }
+.contact-card a { display: inline-block; font-size: 15px; font-weight: 600; color: #C4FF47; text-decoration: none; border-bottom: 1px solid rgba(196,255,71,0.3); padding-bottom: 2px; }
+.contact-card a:hover { border-color: #C4FF47; }
+.faq { margin-top: 40px; }
+.faq h2 { font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #C4FF47; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #1F2B25; }
+.faq-item { padding: 14px 0; border-bottom: 1px solid #111714; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-size: 14px; font-weight: 600; color: #D9EDE4; margin-bottom: 5px; }
+.faq-a { font-size: 14px; color: #6B8A79; line-height: 1.7; }
+.faq-a a { color: #C4FF47; text-decoration: none; }
+footer { padding: 24px 40px; border-top: 1px solid #1F2B25; text-align: center; }
+footer p { font-size: 12px; color: #2E4039; }
+footer span { color: #C4FF47; font-style: italic; font-weight: 900; }
+@media (max-width: 600px) { header { padding: 16px 20px; } main { padding: 40px 20px; } footer { padding: 20px; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <div class="logo">THE ACE</div>
+    <div class="logo-sub">Señales Deportivas</div>
+  </div>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('es')">ES</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('pt-br')">PT-BR</button>
+    <button class="lang-btn" onclick="setLang('pt-pt')">PT-PT</button>
+    <button class="lang-btn" onclick="setLang('de')">DE</button>
+    <button class="lang-btn" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn" onclick="setLang('it')">IT</button>
+    <button class="lang-btn" onclick="setLang('zh')">中文</button>
+    <button class="lang-btn" onclick="setLang('hi')">हिं</button>
+    <button class="lang-btn" onclick="setLang('en-gb')">EN-GB</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ES -->
+<div class="content active" id="lang-es">
+  <div class="page-label">Soporte</div>
+  <h1>¿Cómo podemos ayudarte?</h1>
+  <p class="intro">Para cualquier pregunta, problema o comentario sobre TheAce, escríbenos directamente por correo. Respondemos en un plazo de 24 a 48 horas.</p>
+  <div class="contact-card">
+    <h2>Contacto</h2>
+    <p>Envíanos un correo y te responderemos lo antes posible.</p>
+    <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a>
+  </div>
+  <div class="faq">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-item"><div class="faq-q">¿Qué es TheAce?</div><div class="faq-a">TheAce es una plataforma de inteligencia deportiva que ofrece señales y predicciones basadas en machine learning para partidos de tenis. Próximamente más deportes.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Cómo cancelo mi suscripción?</div><div class="faq-a">Puedes cancelar en cualquier momento desde los ajustes de suscripciones de App Store o Google Play. Tu acceso continuará hasta el final del período de facturación actual.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Cómo elimino mi cuenta?</div><div class="faq-a">Para eliminar tu cuenta y todos tus datos, envía un correo a cscpineda@gmail.com con el asunto "Eliminar mi cuenta". Procesaremos tu solicitud en un máximo de 30 días.</div></div>
+    <div class="faq-item"><div class="faq-q">La app no funciona, ¿qué hago?</div><div class="faq-a">Intenta cerrar y volver a abrir la app, o verifica tu conexión a internet. Si el problema persiste, escríbenos a cscpineda@gmail.com indicando el problema y el modelo de tu dispositivo.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Dónde está la Política de Privacidad?</div><div class="faq-a">Disponible en <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy</a></div></div>
+  </div>
+</div>
+
+<!-- EN -->
+<div class="content" id="lang-en">
+  <div class="page-label">Support</div>
+  <h1>How can we help you?</h1>
+  <p class="intro">For any questions, issues or feedback about TheAce, reach out directly by email. We typically respond within 24–48 hours.</p>
+  <div class="contact-card">
+    <h2>Contact</h2>
+    <p>Send us an email and we'll get back to you as soon as possible.</p>
+    <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a>
+  </div>
+  <div class="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item"><div class="faq-q">What is TheAce?</div><div class="faq-a">TheAce is a sports intelligence platform that provides ML-powered signals and predictions for tennis matches. More sports coming soon.</div></div>
+    <div class="faq-item"><div class="faq-q">How do I cancel my subscription?</div><div class="faq-a">You can cancel at any time through your App Store or Google Play subscription settings. Your access continues until the end of the current billing period.</div></div>
+    <div class="faq-item"><div class="faq-q">How do I delete my account?</div><div class="faq-a">To delete your account and all associated data, email cscpineda@gmail.com with the subject "Delete my account". We will process your request within 30 days.</div></div>
+    <div class="faq-item"><div class="faq-q">The app is not working — what should I do?</div><div class="faq-a">Try closing and reopening the app, or check your internet connection. If the issue persists, email us at cscpineda@gmail.com with a description of the problem and your device model.</div></div>
+    <div class="faq-item"><div class="faq-q">Where can I read the Privacy Policy?</div><div class="faq-a">Available at <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy</a></div></div>
+  </div>
+</div>
+
+<!-- PT-BR -->
+<div class="content" id="lang-pt-br">
+  <div class="page-label">Suporte</div>
+  <h1>Como podemos ajudar você?</h1>
+  <p class="intro">Para qualquer dúvida, problema ou comentário sobre o TheAce, entre em contato diretamente por e-mail. Respondemos em até 24 a 48 horas.</p>
+  <div class="contact-card">
+    <h2>Contato</h2>
+    <p>Envie um e-mail e responderemos o mais rápido possível.</p>
+    <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a>
+  </div>
+  <div class="faq">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-item"><div class="faq-q">O que é o TheAce?</div><div class="faq-a">O TheAce é uma plataforma de inteligência esportiva que oferece sinais e previsões baseados em machine learning para partidas de tênis. Em breve, mais esportes.</div></div>
+    <div class="faq-item"><div class="faq-q">Como cancelo minha assinatura?</div><div class="faq-a">Você pode cancelar a qualquer momento nas configurações de assinatura da App Store ou Google Play. O acesso continua até o final do período de cobrança atual.</div></div>
+    <div class="faq-item"><div class="faq-q">Como excluo minha conta?</div><div class="faq-a">Para excluir sua conta e todos os dados, envie um e-mail para cscpineda@gmail.com com o assunto "Excluir minha conta". Processaremos em até 30 dias.</div></div>
+    <div class="faq-item"><div class="faq-q">O app não está funcionando — o que faço?</div><div class="faq-a">Tente fechar e reabrir o app ou verifique sua conexão. Se persistir, envie um e-mail para cscpineda@gmail.com com o problema e o modelo do dispositivo.</div></div>
+    <div class="faq-item"><div class="faq-q">Onde posso ler a Política de Privacidade?</div><div class="faq-a">Disponível em <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy</a></div></div>
+  </div>
+</div>
+
+<!-- PT-PT -->
+<div class="content" id="lang-pt-pt">
+  <div class="page-label">Suporte</div>
+  <h1>Como podemos ajudar-te?</h1>
+  <p class="intro">Para qualquer questão, problema ou comentário sobre o TheAce, contacta-nos diretamente por e-mail. Respondemos normalmente em 24 a 48 horas.</p>
+  <div class="contact-card">
+    <h2>Contacto</h2>
+    <p>Envia-nos um e-mail e responderemos o mais brevemente possível.</p>
+    <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a>
+  </div>
+  <div class="faq">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq-item"><div class="faq-q">O que é o TheAce?</div><div class="faq-a">O TheAce é uma plataforma de inteligência desportiva que oferece sinais e previsões baseados em machine learning para jogos de ténis. Em breve, mais desportos.</div></div>
+    <div class="faq-item"><div class="faq-q">Como cancelo a minha subscrição?</div><div class="faq-a">Podes cancelar a qualquer momento nas definições de subscrições da App Store ou Google Play. O acesso continua até ao final do período de faturação atual.</div></div>
+    <div class="faq-item"><div class="faq-q">Como elimino a minha conta?</div><div class="faq-a">Para eliminar a tua conta e todos os dados, envia um e-mail para cscpineda@gmail.com com o assunto "Eliminar a minha conta". Processaremos em 30 dias.</div></div>
+    <div class="faq-item"><div class="faq-q">A app não está a funcionar — o que faço?</div><div class="faq-a">Tenta fechar e reabrir a app ou verifica a ligação à internet. Se persistir, envia-nos um e-mail para cscpineda@gmail.com com o problema e o modelo do dispositivo.</div></div>
+    <div class="faq-item"><div class="faq-q">Onde posso ler a Política de Privacidade?</div><div class="faq-a">Disponível em <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy</a></div></div>
+  </div>
+</div>
+
+<!-- DE -->
+<div class="content" id="lang-de">
+  <div class="page-label">Support</div>
+  <h1>Wie können wir dir helfen?</h1>
+  <p class="intro">Bei Fragen, Problemen oder Feedback zu TheAce wende dich direkt per E-Mail an uns. Wir antworten in der Regel innerhalb von 24 bis 48 Stunden.</p>
+  <div class="contact-card">
+    <h2>Kontakt</h2>
+    <p>Schreib uns eine E-Mail und wir melden uns so schnell wie möglich.</p>
+    <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a>
+  </div>
+  <div class="faq">
+    <h2>Häufige Fragen</h2>
+    <div class="faq-item"><div class="faq-q">Was ist TheAce?</div><div class="faq-a">TheAce ist eine Sport-Intelligence-Plattform mit ML-basierten Signalen und Vorhersagen für Tennismatches. Weitere Sportarten folgen in Kürze.</div></div>
+    <div class="faq-item"><div class="faq-q">Wie kündige ich mein Abonnement?</div><div class="faq-a">Du kannst jederzeit über die Abonnement-Einstellungen im App Store oder Google Play kündigen. Dein Zugang bleibt bis zum Ende des Abrechnungszeitraums bestehen.</div></div>
+    <div class="faq-item"><div class="faq-q">Wie lösche ich mein Konto?</div><div class="faq-a">Sende eine E-Mail an cscpineda@gmail.com mit dem Betreff "Konto löschen". Wir bearbeiten deine Anfrage innerhalb von 30 Tagen.</div></div>
+    <div class="faq-item"><div class="faq-q">Die App funktioniert nicht — was tun?</div><div class="faq-a">Schließe die App und öffne sie erneut, oder prüfe deine Internetverbindung. Falls das Problem weiterhin besteht, schreib uns an cscpineda@gmail.com.</div></div>
+    <div class="faq-item"><div class="faq-q">Wo finde ich die Datenschutzrichtlinie?</div><div class="faq-a">Verfügbar unter <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy</a></div></div>
+  </div>
+</div>
+
+<!-- FR -->
+<div class="content" id="lang-fr">
+  <div class="page-label">Support</div>
+  <h1>Comment pouvons-nous vous aider ?</h1>
+  <p class="intro">Pour toute question, problème ou commentaire concernant TheAce, contactez-nous directement par e-mail. Nous répondons généralement dans les 24 à 48 heures.</p>
+  <div class="contact-card">
+    <h2>Contact</h2>
+    <p>Envoyez-nous un e-mail et nous vous répondrons dès que possible.</p>
+    <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a>
+  </div>
+  <div class="faq">
+    <h2>Questions fréquentes</h2>
+    <div class="faq-item"><div class="faq-q">Qu'est-ce que TheAce ?</div><div class="faq-a">TheAce est une plateforme d'intelligence sportive proposant des signaux et prédictions ML pour les matchs de tennis. D'autres sports arrivent bientôt.</div></div>
+    <div class="faq-item"><div class="faq-q">Comment résilier mon abonnement ?</div><div class="faq-a">Vous pouvez résilier à tout moment depuis les paramètres d'abonnement de l'App Store ou Google Play. L'accès se poursuit jusqu'à la fin de la période de facturation.</div></div>
+    <div class="faq-item"><div class="faq-q">Comment supprimer mon compte ?</div><div class="faq-a">Envoyez un e-mail à cscpineda@gmail.com avec l'objet "Supprimer mon compte". Nous traiterons votre demande dans un délai de 30 jours.</div></div>
+    <div class="faq-item"><div class="faq-q">L'app ne fonctionne pas — que faire ?</div><div class="faq-a">Fermez et rouvrez l'app, ou vérifiez votre connexion internet. Si le problème persiste, écrivez-nous à cscpineda@gmail.com.</div></div>
+    <div class="faq-item"><div class="faq-q">Où puis-je lire la Politique de confidentialité ?</div><div class="faq-a">Disponible sur <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy</a></div></div>
+  </div>
+</div>
+
+<!-- IT -->
+<div class="content" id="lang-it">
+  <div class="page-label">Supporto</div>
+  <h1>Come possiamo aiutarti?</h1>
+  <p class="intro">Per qualsiasi domanda, problema o feedback su TheAce, contattaci direttamente via e-mail. Rispondiamo generalmente entro 24–48 ore.</p>
+  <div class="contact-card">
+    <h2>Contatti</h2>
+    <p>Inviaci un'e-mail e ti risponderemo il prima possibile.</p>
+    <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a>
+  </div>
+  <div class="faq">
+    <h2>Domande frequenti</h2>
+    <div class="faq-item"><div class="faq-q">Cos'è TheAce?</div><div class="faq-a">TheAce è una piattaforma di intelligenza sportiva con segnali e previsioni ML per le partite di tennis. Presto disponibili altri sport.</div></div>
+    <div class="faq-item"><div class="faq-q">Come cancello il mio abbonamento?</div><div class="faq-a">Puoi cancellare in qualsiasi momento dalle impostazioni abbonamenti dell'App Store o Google Play. L'accesso continua fino alla fine del periodo di fatturazione.</div></div>
+    <div class="faq-item"><div class="faq-q">Come elimino il mio account?</div><div class="faq-a">Invia un'e-mail a cscpineda@gmail.com con oggetto "Elimina il mio account". Elaboreremo la tua richiesta entro 30 giorni.</div></div>
+    <div class="faq-item"><div class="faq-q">L'app non funziona — cosa faccio?</div><div class="faq-a">Prova a chiudere e riaprire l'app o controlla la connessione internet. Se il problema persiste, scrivici a cscpineda@gmail.com.</div></div>
+    <div class="faq-item"><div class="faq-q">Dove posso leggere l'Informativa sulla Privacy?</div><div class="faq-a">Disponibile su <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy</a></div></div>
+  </div>
+</div>
+
+<!-- ZH -->
+<div class="content" id="lang-zh">
+  <div class="page-label">支持</div>
+  <h1>我们能为您做什么？</h1>
+  <p class="intro">如有任何关于 TheAce 的问题、反馈或建议，请直接发送电子邮件联系我们。我们通常在 24 至 48 小时内回复。</p>
+  <div class="contact-card">
+    <h2>联系方式</h2>
+    <p>发送电子邮件，我们会尽快回复您。</p>
+    <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a>
+  </div>
+  <div class="faq">
+    <h2>常见问题</h2>
+    <div class="faq-item"><div class="faq-q">TheAce 是什么？</div><div class="faq-a">TheAce 是一款基于机器学习为网球比赛提供信号和预测的体育智能平台。更多运动项目即将推出。</div></div>
+    <div class="faq-item"><div class="faq-q">如何取消订阅？</div><div class="faq-a">您可以随时通过 App Store 或 Google Play 的订阅设置取消。访问权限将持续到当前计费周期结束。</div></div>
+    <div class="faq-item"><div class="faq-q">如何删除我的账户？</div><div class="faq-a">发送电子邮件至 cscpineda@gmail.com，主题为"删除我的账户"。我们将在 30 天内处理您的请求。</div></div>
+    <div class="faq-item"><div class="faq-q">应用无法正常使用，该怎么办？</div><div class="faq-a">请尝试关闭并重新打开应用，或检查网络连接。如问题持续，请发邮件至 cscpineda@gmail.com 说明问题及设备型号。</div></div>
+    <div class="faq-item"><div class="faq-q">在哪里查看隐私政策？</div><div class="faq-a"><a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy</a></div></div>
+  </div>
+</div>
+
+<!-- HI -->
+<div class="content" id="lang-hi">
+  <div class="page-label">सहायता</div>
+  <h1>हम आपकी कैसे मदद कर सकते हैं?</h1>
+  <p class="intro">TheAce के बारे में किसी भी सवाल, समस्या या फीडबैक के लिए सीधे ईमेल करें। हम आमतौर पर 24 से 48 घंटों में जवाब देते हैं।</p>
+  <div class="contact-card">
+    <h2>संपर्क</h2>
+    <p>हमें ईमेल करें और हम जल्द से जल्द जवाब देंगे।</p>
+    <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a>
+  </div>
+  <div class="faq">
+    <h2>अक्सर पूछे जाने वाले सवाल</h2>
+    <div class="faq-item"><div class="faq-q">TheAce क्या है?</div><div class="faq-a">TheAce एक स्पोर्ट्स इंटेलिजेंस प्लेटफॉर्म है जो टेनिस मैचों के लिए ML-आधारित सिग्नल और प्रेडिक्शन देता है। जल्द ही और खेल जुड़ेंगे।</div></div>
+    <div class="faq-item"><div class="faq-q">सब्सक्रिप्शन कैसे रद्द करें?</div><div class="faq-a">App Store या Google Play की सब्सक्रिप्शन सेटिंग्स से कभी भी रद्द करें। एक्सेस मौजूदा बिलिंग पीरियड तक जारी रहेगा।</div></div>
+    <div class="faq-item"><div class="faq-q">अकाउंट कैसे डिलीट करें?</div><div class="faq-a">cscpineda@gmail.com पर "मेरा अकाउंट डिलीट करें" सब्जेक्ट के साथ ईमेल करें। हम 30 दिनों में प्रोसेस करेंगे।</div></div>
+    <div class="faq-item"><div class="faq-q">ऐप काम नहीं कर रहा — क्या करें?</div><div class="faq-a">ऐप बंद करके दोबारा खोलें या इंटरनेट चेक करें। समस्या बनी रहे तो cscpineda@gmail.com पर ईमेल करें।</div></div>
+    <div class="faq-item"><div class="faq-q">प्राइवेसी पॉलिसी कहाँ पढ़ें?</div><div class="faq-a"><a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy</a> पर उपलब्ध है।</div></div>
+  </div>
+</div>
+
+<!-- EN-GB -->
+<div class="content" id="lang-en-gb">
+  <div class="page-label">Support</div>
+  <h1>How can we help you?</h1>
+  <p class="intro">For any questions, issues or feedback about TheAce, get in touch directly by email. We typically respond within 24–48 hours.</p>
+  <div class="contact-card">
+    <h2>Contact</h2>
+    <p>Send us an email and we'll get back to you as soon as possible.</p>
+    <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a>
+  </div>
+  <div class="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item"><div class="faq-q">What is TheAce?</div><div class="faq-a">TheAce is a sports intelligence platform providing ML-powered signals and predictions for tennis matches. More sports coming soon.</div></div>
+    <div class="faq-item"><div class="faq-q">How do I cancel my subscription?</div><div class="faq-a">You can cancel at any time via your App Store or Google Play subscription settings. Access continues until the end of the current billing period.</div></div>
+    <div class="faq-item"><div class="faq-q">How do I delete my account?</div><div class="faq-a">Email cscpineda@gmail.com with the subject "Delete my account". We will process your request within 30 days.</div></div>
+    <div class="faq-item"><div class="faq-q">The app is not working — what should I do?</div><div class="faq-a">Try closing and reopening the app, or check your internet connection. If the issue persists, email cscpineda@gmail.com with a description and your device model.</div></div>
+    <div class="faq-item"><div class="faq-q">Where can I read the Privacy Policy?</div><div class="faq-a">Available at <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy</a></div></div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <p><span>THE ACE</span> · Señales Deportivas · cscpineda@gmail.com</p>
+</footer>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+  document.querySelector(`[onclick="setLang('${lang}')"]`).classList.add('active');
+  document.documentElement.lang = lang;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
