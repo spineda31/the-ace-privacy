@@ -1,99 +1,2108 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidad – The ACE</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 40px 24px;
-      color: #1a1a1a;
-      line-height: 1.7;
-    }
-    h1 { font-size: 28px; margin-bottom: 4px; }
-    h2 { font-size: 18px; margin-top: 36px; margin-bottom: 8px; }
-    p, li { font-size: 15px; color: #333; }
-    ul { padding-left: 20px; }
-    a { color: #4CAF50; }
-    .updated { color: #888; font-size: 13px; margin-bottom: 32px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TheAce — Privacy Policy / Política de Privacidad</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0f0f0f;
+  --surface: #faf9f7;
+  --card: #ffffff;
+  --border: #e8e4dc;
+  --accent: #C4FF47;
+  --accent-dim: #8ab030;
+  --text: #1a1a1a;
+  --muted: #6b6560;
+  --light: #f3f0ea;
+  --display: 'Barlow', sans-serif;
+  --serif: 'Barlow', sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--surface);
+  color: var(--text);
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* HEADER */
+.site-header {
+  background: var(--ink);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #222;
+}
+.logo { font-family: 'Barlow', sans-serif; font-weight: 900; font-style: italic; font-size: 22px; color: #C4FF47; letter-spacing: 1px; }
+.logo span { color: #fff; font-size: 13px; font-family: 'Barlow', sans-serif; font-weight: 300; margin-left: 12px; opacity: 0.6; }
+
+/* LANGUAGE SWITCHER */
+.lang-switcher {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.lang-btn {
+  padding: 5px 10px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  background: transparent;
+  border: 1px solid #333;
+  color: #888;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+.lang-btn.active { background: var(--accent); border-color: var(--accent); color: var(--ink); font-weight: 600; }
+
+/* HERO */
+.hero {
+  background: var(--ink);
+  padding: 60px 40px 48px;
+  border-bottom: 1px solid #222;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: 'PRIVACY';
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 120px;
+  color: rgba(196,255,71,0.04);
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: -2px;
+}
+.hero-label {
+  font-family: 'Barlow', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.hero-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 42px;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 12px;
+  max-width: 600px;
+}
+.hero-meta {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+}
+.hero-warning {
+  margin-top: 24px;
+  background: rgba(196,255,71,0.08);
+  border: 1px solid rgba(196,255,71,0.2);
+  border-left: 3px solid var(--accent);
+  padding: 14px 18px;
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.6;
+  max-width: 720px;
+}
+.hero-warning strong { color: var(--accent); }
+
+/* LAYOUT */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* CONTENT */
+.content {
+  display: none;
+  padding: 56px 0 80px;
+}
+.content.active { display: block; }
+
+/* TOC */
+.toc {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 24px 28px;
+  margin-bottom: 48px;
+}
+.toc-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  color: rgba(140,185,30,0.8);
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+.toc ol {
+  padding-left: 20px;
+}
+.toc li {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+.toc a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.toc a:hover { color: rgba(140,185,30,0.8); }
+
+/* SECTIONS */
+.section {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+.section:last-child { border-bottom: none; }
+
+.section-num {
+  font-family: 'Barlow', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.section-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 26px;
+  color: var(--ink);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.subsection-title {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  color: var(--ink);
+  margin: 24px 0 12px;
+}
+p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 14px;
+  line-height: 1.8;
+}
+ul.policy-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 16px;
+}
+ul.policy-list li {
+  font-size: 15px;
+  color: #333;
+  padding: 7px 0 7px 24px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  line-height: 1.7;
+}
+ul.policy-list li:last-child { border-bottom: none; }
+ul.policy-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* HIGHLIGHT */
+.highlight {
+  background: var(--light);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 16px 20px;
+  margin: 16px 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.highlight strong { color: var(--ink); }
+
+/* CONTACT BOX */
+.contact-box {
+  background: var(--ink);
+  padding: 28px 32px;
+  margin-top: 20px;
+}
+.contact-box p { color: #aaa; font-size: 14px; }
+.contact-box a { color: var(--accent); text-decoration: none; }
+.contact-box a:hover { text-decoration: underline; }
+
+/* FOOTER */
+footer {
+  background: var(--ink);
+  padding: 32px 40px;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+footer p { color: #555; font-size: 13px; margin: 0; }
+footer .brand { font-family: 'Barlow', sans-serif; font-weight: 900; font-style: italic; font-size: 20px; color: #C4FF47; letter-spacing: 1px; margin-bottom: 6px; }
+footer .tagline { color: #444; font-style: italic; font-size: 12px; }
+
+@media (max-width: 640px) {
+  .site-header { padding: 16px 20px; flex-direction: column; gap: 12px; align-items: flex-start; }
+  .hero { padding: 40px 20px 36px; }
+  .hero-title { font-size: 30px; }
+  .container { padding: 0 20px; }
+  .content { padding: 40px 0 60px; }
+}
+</style>
 </head>
 <body>
 
-<h1>Política de Privacidad</h1>
-<p class="updated">Última actualización: 20 de abril de 2026</p>
+<header class="site-header">
+  <div class="logo">THE ACE <span>Privacy Policy</span></div>
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('es')">ES</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('pt-br')">PT-BR</button>
+    <button class="lang-btn" onclick="setLang('pt-pt')">PT-PT</button>
+    <button class="lang-btn" onclick="setLang('de')">DE</button>
+    <button class="lang-btn" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn" onclick="setLang('it')">IT</button>
+    <button class="lang-btn" onclick="setLang('zh')">中文</button>
+    <button class="lang-btn" onclick="setLang('hi')">हिं</button>
+    <button class="lang-btn" onclick="setLang('en-gb')">EN-GB</button>
+  </div>
+</header>
 
-<p>
-  The ACE ("nosotros", "nuestra app") es una aplicación móvil de fantasy tennis.
-  Esta política describe qué datos recopilamos, cómo los usamos y cómo los protegemos.
-</p>
+<div class="hero">
+  <div class="hero-label">TheAce: Señales Deportivas</div>
+  <div class="hero-title" id="hero-title">Política de Privacidad</div>
+  <div class="hero-meta" id="hero-meta">Última actualización: Abril 2026</div>
+  <div class="hero-warning">
+    <strong>Aviso legal:</strong> Este documento ha sido redactado siguiendo las mejores prácticas del sector. Dado que TheAce opera en múltiples jurisdicciones (GDPR, LGPD, CCPA), se recomienda revisión por un abogado especializado antes de su publicación oficial.
+  </div>
+</div>
 
-<h2>1. Información que recopilamos</h2>
-<ul>
-  <li><strong>Cuenta:</strong> nombre de usuario, correo electrónico y foto de perfil al registrarse.</li>
-  <li><strong>Uso:</strong> interacciones dentro de la app (partidos vistos, predicciones, ligas).</li>
-  <li><strong>Dispositivo:</strong> tipo de dispositivo, sistema operativo e idioma.</li>
-  <li><strong>Ubicación:</strong> solo si el usuario la otorga explícitamente, para mostrar contenido regional.</li>
-</ul>
+<!-- ==================== ESPAÑOL ==================== -->
+<div class="content active" id="lang-es">
+<div class="container">
+  <div class="toc">
+    <div class="toc-title">Índice</div>
+    <ol>
+      <li><a href="#es-1">Introducción</a></li>
+      <li><a href="#es-2">Datos que recopilamos</a></li>
+      <li><a href="#es-3">Cómo usamos tus datos</a></li>
+      <li><a href="#es-4">Base legal para el tratamiento</a></li>
+      <li><a href="#es-5">Con quién compartimos tus datos</a></li>
+      <li><a href="#es-6">Retención de datos</a></li>
+      <li><a href="#es-7">Tus derechos</a></li>
+      <li><a href="#es-8">Seguridad de los datos</a></li>
+      <li><a href="#es-9">Transferencias internacionales</a></li>
+      <li><a href="#es-10">Menores de edad</a></li>
+      <li><a href="#es-11">Notificaciones push</a></li>
+      <li><a href="#es-12">Cookies y tecnologías similares</a></li>
+      <li><a href="#es-13">Cambios en esta política</a></li>
+      <li><a href="#es-14">Contacto</a></li>
+    </ol>
+  </div>
 
-<h2>2. Cómo usamos la información</h2>
-<ul>
-  <li>Proveer y mejorar las funcionalidades de la app.</li>
-  <li>Personalizar la experiencia del usuario (idioma, preferencias).</li>
-  <li>Enviar notificaciones relacionadas con partidos y ligas (solo si el usuario las activa).</li>
-  <li>Garantizar la seguridad y prevenir fraudes.</li>
-</ul>
+  <div class="section" id="es-1">
+    <div class="section-num">01</div>
+    <div class="section-title">Introducción</div>
+    <p>TheAce ("nosotros", "nuestro" o "la aplicación") es una plataforma de inteligencia deportiva que ofrece señales y predicciones basadas en modelos de machine learning e inteligencia artificial. Esta Política de Privacidad describe cómo recopilamos, usamos, almacenamos y protegemos tu información personal cuando utilizas nuestra aplicación móvil TheAce: Señales Deportivas.</p>
+    <p>Al descargar, registrarte o utilizar TheAce, aceptas las prácticas descritas en esta política. Si no estás de acuerdo, te pedimos que no utilices la aplicación.</p>
+    <p>Esta política aplica a todos los usuarios de TheAce en cualquier país donde la aplicación esté disponible, incluyendo Colombia, México, Brasil, Argentina, Estados Unidos, Reino Unido, Alemania, Francia, Italia y otros mercados.</p>
+  </div>
 
-<h2>3. Compartir información con terceros</h2>
-<p>
-  No vendemos ni alquilamos tu información personal. Usamos los siguientes servicios de terceros
-  que pueden procesar datos según sus propias políticas:
-</p>
-<ul>
-  <li><strong>Firebase (Google):</strong> autenticación, base de datos y análisis. <a href="https://firebase.google.com/support/privacy" target="_blank">Política de Firebase</a></li>
-  <li><strong>API-Tennis:</strong> datos de partidos y jugadores en tiempo real.</li>
-</ul>
+  <div class="section" id="es-2">
+    <div class="section-num">02</div>
+    <div class="section-title">Datos que recopilamos</div>
+    <div class="subsection-title">2.1 Datos que tú nos proporcionas</div>
+    <ul class="policy-list">
+      <li><strong>Correo electrónico</strong> — utilizado para crear y gestionar tu cuenta.</li>
+      <li><strong>Contraseña</strong> — almacenada de forma cifrada. Nunca en texto plano.</li>
+      <li><strong>Login social</strong> — si usas Google o Apple, recibimos tu nombre y correo según sus políticas de privacidad.</li>
+      <li><strong>Preferencias</strong> — configuraciones que guardas dentro de la app, como deportes favoritos y ajustes de notificaciones.</li>
+    </ul>
+    <div class="subsection-title">2.2 Datos que recopilamos automáticamente</div>
+    <ul class="policy-list">
+      <li><strong>Identificador de dispositivo</strong> — para gestionar sesiones y notificaciones push.</li>
+      <li><strong>Sistema operativo y versión</strong> — para garantizar compatibilidad y solucionar errores.</li>
+      <li><strong>Historial de uso</strong> — señales consultadas y funciones utilizadas, solo para mejorar el producto.</li>
+      <li><strong>Datos de diagnóstico</strong> — registros técnicos anónimos para identificar y corregir fallos.</li>
+    </ul>
+    <div class="subsection-title">2.3 Datos de terceros</div>
+    <ul class="policy-list">
+      <li><strong>Firebase (Google)</strong> — autenticación, base de datos y notificaciones push.</li>
+      <li><strong>API de datos deportivos</strong> — fuentes externas para generar señales. No compartimos datos personales con estos proveedores.</li>
+      <li><strong>Procesadores de pago</strong> — Apple, Google, RevenueCat o Stripe según corresponda. TheAce no almacena datos de tarjetas ni información bancaria.</li>
+    </ul>
+    <p>No recopilamos datos sensibles como información de salud, origen étnico, creencias religiosas, orientación sexual ni datos biométricos.</p>
+  </div>
 
-<h2>4. Retención de datos</h2>
-<p>
-  Conservamos tu información mientras tu cuenta esté activa. Puedes solicitar la eliminación
-  de tu cuenta y datos en cualquier momento escribiéndonos.
-</p>
+  <div class="section" id="es-3">
+    <div class="section-num">03</div>
+    <div class="section-title">Cómo usamos tus datos</div>
+    <ul class="policy-list">
+      <li>Crear y gestionar tu cuenta de usuario.</li>
+      <li>Entregarte las señales deportivas y el contenido de la aplicación.</li>
+      <li>Enviarte notificaciones push sobre partidos y señales relevantes, si has dado tu consentimiento.</li>
+      <li>Gestionar tu suscripción y procesar pagos.</li>
+      <li>Mejorar el modelo de machine learning basándonos en patrones de uso anónimos.</li>
+      <li>Resolver problemas técnicos y garantizar la seguridad de la plataforma.</li>
+      <li>Cumplir con obligaciones legales aplicables.</li>
+    </ul>
+    <div class="highlight"><strong>Importante:</strong> No usamos tus datos para publicidad de terceros ni los vendemos a ninguna empresa externa.</div>
+  </div>
 
-<h2>5. Seguridad</h2>
-<p>
-  Utilizamos HTTPS y los mecanismos de seguridad estándar de Firebase para proteger tu información.
-  No implementamos algoritmos de encriptación propios.
-</p>
+  <div class="section" id="es-4">
+    <div class="section-num">04</div>
+    <div class="section-title">Base legal para el tratamiento de datos</div>
+    <ul class="policy-list">
+      <li><strong>Ejecución del contrato</strong> — para prestarte los servicios que has solicitado al registrarte.</li>
+      <li><strong>Consentimiento</strong> — para notificaciones push y comunicaciones de marketing, revocables en cualquier momento.</li>
+      <li><strong>Interés legítimo</strong> — para mejorar el producto, garantizar la seguridad y prevenir fraudes.</li>
+      <li><strong>Obligación legal</strong> — cuando la ley nos requiera conservar o revelar información.</li>
+    </ul>
+  </div>
 
-<h2>6. Menores de edad</h2>
-<p>
-  The ACE no está dirigida a menores de 13 años. No recopilamos intencionalmente
-  datos de menores de edad.
-</p>
+  <div class="section" id="es-5">
+    <div class="section-num">05</div>
+    <div class="section-title">Con quién compartimos tus datos</div>
+    <p>TheAce no vende, alquila ni comercializa tus datos personales. Solo compartimos información en los siguientes casos:</p>
+    <ul class="policy-list">
+      <li><strong>Proveedores tecnológicos</strong> — Firebase (Google) para autenticación y base de datos, necesarios para el funcionamiento de la app.</li>
+      <li><strong>Procesadores de pago</strong> — Apple, Google, RevenueCat o Stripe para gestionar suscripciones. TheAce no accede a tus datos financieros completos.</li>
+      <li><strong>Autoridades legales</strong> — cuando una ley u orden judicial nos lo exija, divulgaremos la información mínima necesaria.</li>
+      <li><strong>Transacciones corporativas</strong> — en caso de fusión o adquisición, tus datos podrían transferirse al nuevo operador, quien estará obligado a respetar esta política.</li>
+    </ul>
+  </div>
 
-<h2>7. Tus derechos</h2>
-<p>Tienes derecho a:</p>
-<ul>
-  <li>Acceder a los datos que tenemos sobre ti.</li>
-  <li>Solicitar la corrección o eliminación de tus datos.</li>
-  <li>Revocar permisos (ubicación, notificaciones) desde la configuración de tu dispositivo.</li>
-</ul>
+  <div class="section" id="es-6">
+    <div class="section-num">06</div>
+    <div class="section-title">Retención de datos</div>
+    <ul class="policy-list">
+      <li><strong>Datos de cuenta</strong> — mientras tu cuenta esté activa. Al eliminarla, borraremos tus datos en un máximo de 30 días.</li>
+      <li><strong>Datos de uso anónimos</strong> — pueden conservarse indefinidamente para análisis estadísticos.</li>
+      <li><strong>Datos de transacciones</strong> — conservados por el período que exija la legislación fiscal aplicable (generalmente 5 a 7 años).</li>
+    </ul>
+  </div>
 
-<h2>8. Cambios a esta política</h2>
-<p>
-  Podemos actualizar esta política ocasionalmente. Te notificaremos dentro de la app
-  si los cambios son significativos.
-</p>
+  <div class="section" id="es-7">
+    <div class="section-num">07</div>
+    <div class="section-title">Tus derechos</div>
+    <ul class="policy-list">
+      <li><strong>Acceso</strong> — solicitar una copia de los datos personales que tenemos sobre ti.</li>
+      <li><strong>Rectificación</strong> — pedirnos que corrijamos datos inexactos o incompletos.</li>
+      <li><strong>Eliminación</strong> — solicitar que eliminemos tus datos, sujeto a obligaciones legales.</li>
+      <li><strong>Portabilidad</strong> — solicitar tus datos en formato estructurado y legible por máquina.</li>
+      <li><strong>Oposición</strong> — oponerte al tratamiento basado en interés legítimo.</li>
+      <li><strong>Retirar consentimiento</strong> — revocar en cualquier momento el consentimiento para notificaciones.</li>
+      <li><strong>Limitación</strong> — solicitar que limitemos el tratamiento en ciertas circunstancias.</li>
+    </ul>
+    <p>Para ejercer estos derechos contáctanos en <strong>cscpineda@gmail.com</strong>. Responderemos en un máximo de 30 días.</p>
+  </div>
 
-<h2>9. Contacto</h2>
-<p>
-  Si tienes preguntas sobre esta política, escríbenos a:
-  <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a>
-</p>
+  <div class="section" id="es-8">
+    <div class="section-num">08</div>
+    <div class="section-title">Seguridad de los datos</div>
+    <ul class="policy-list">
+      <li><strong>Cifrado en tránsito</strong> — todas las comunicaciones usan HTTPS/TLS.</li>
+      <li><strong>Cifrado en reposo</strong> — los datos sensibles están cifrados en nuestra base de datos.</li>
+      <li><strong>Autenticación segura</strong> — contraseñas almacenadas con funciones de hash seguras.</li>
+      <li><strong>Acceso restringido</strong> — solo personal autorizado puede acceder a datos de usuario.</li>
+      <li><strong>Monitoreo</strong> — supervisamos nuestra infraestructura para detectar actividades sospechosas.</li>
+    </ul>
+  </div>
 
+  <div class="section" id="es-9">
+    <div class="section-num">09</div>
+    <div class="section-title">Transferencias internacionales de datos</div>
+    <p>Tus datos pueden ser procesados en servidores fuera de tu país de residencia, incluyendo Estados Unidos donde están alojados los servidores de Firebase (Google).</p>
+    <p>Para usuarios en la Unión Europea: las transferencias se realizan bajo las Cláusulas Contractuales Tipo aprobadas por la Comisión Europea.</p>
+    <p>Para usuarios en Brasil: el tratamiento cumple con la Lei Geral de Proteção de Dados (LGPD).</p>
+  </div>
+
+  <div class="section" id="es-10">
+    <div class="section-num">10</div>
+    <div class="section-title">Menores de edad</div>
+    <p>TheAce no está dirigida a personas menores de 18 años. No recopilamos intencionalmente datos de menores. Si crees que tu hijo menor de edad nos ha proporcionado datos, contáctanos en cscpineda@gmail.com y los eliminaremos de inmediato.</p>
+  </div>
+
+  <div class="section" id="es-11">
+    <div class="section-num">11</div>
+    <div class="section-title">Notificaciones push</div>
+    <p>Con tu consentimiento, TheAce puede enviarte notificaciones sobre señales deportivas, resultados y actualizaciones. Puedes desactivarlas en cualquier momento desde los ajustes de tu dispositivo o desde la configuración de la app.</p>
+  </div>
+
+  <div class="section" id="es-12">
+    <div class="section-num">12</div>
+    <div class="section-title">Cookies y tecnologías similares</div>
+    <p>La app móvil de TheAce no utiliza cookies de rastreo web. Usamos tokens de sesión e identificadores de dispositivo para mantener tu sesión activa y garantizar el funcionamiento correcto de la app.</p>
+  </div>
+
+  <div class="section" id="es-13">
+    <div class="section-num">13</div>
+    <div class="section-title">Cambios en esta política</div>
+    <p>Podemos actualizar esta política periódicamente. Cuando realicemos cambios materiales, te notificaremos a través de la aplicación o por correo electrónico con al menos 30 días de anticipación. La fecha de última actualización siempre estará visible al inicio del documento.</p>
+  </div>
+
+  <div class="section" id="es-14">
+    <div class="section-num">14</div>
+    <div class="section-title">Contacto</div>
+    <div class="contact-box">
+      <p>Para preguntas, dudas o solicitudes sobre esta Política de Privacidad:</p>
+      <br>
+      <p>📧 <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a></p>
+      <p>🌐 <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy/</a></p>
+      <br>
+      <p>Responderemos en un plazo máximo de 30 días hábiles.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== ENGLISH (US) ==================== -->
+<div class="content" id="lang-en">
+<div class="container">
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#en-1">Introduction</a></li>
+      <li><a href="#en-2">Data We Collect</a></li>
+      <li><a href="#en-3">How We Use Your Data</a></li>
+      <li><a href="#en-4">Legal Basis for Processing</a></li>
+      <li><a href="#en-5">Who We Share Your Data With</a></li>
+      <li><a href="#en-6">Data Retention</a></li>
+      <li><a href="#en-7">Your Rights</a></li>
+      <li><a href="#en-8">Data Security</a></li>
+      <li><a href="#en-9">International Data Transfers</a></li>
+      <li><a href="#en-10">Minors</a></li>
+      <li><a href="#en-11">Push Notifications</a></li>
+      <li><a href="#en-12">Cookies and Similar Technologies</a></li>
+      <li><a href="#en-13">Changes to This Policy</a></li>
+      <li><a href="#en-14">Contact</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="en-1">
+    <div class="section-num">01</div>
+    <div class="section-title">Introduction</div>
+    <p>TheAce ("we", "our", or "the app") is a sports intelligence platform that provides signals and predictions based on machine learning and artificial intelligence models. This Privacy Policy describes how we collect, use, store, and protect your personal information when you use our mobile application TheAce: Sports Signals.</p>
+    <p>By downloading, registering, or using TheAce, you agree to the practices described in this policy. If you disagree with any of the terms, please do not use the application.</p>
+    <p>This policy applies to all TheAce users in any country where the app is available, including the United States, United Kingdom, Colombia, Mexico, Brazil, Argentina, Germany, France, Italy, and other markets.</p>
+  </div>
+
+  <div class="section" id="en-2">
+    <div class="section-num">02</div>
+    <div class="section-title">Data We Collect</div>
+    <div class="subsection-title">2.1 Data You Provide to Us</div>
+    <ul class="policy-list">
+      <li><strong>Email address</strong> — used to create and manage your account.</li>
+      <li><strong>Password</strong> — stored in encrypted form. Never stored in plain text.</li>
+      <li><strong>Social login</strong> — if you use Google or Apple login, we receive your name and email in accordance with their privacy policies.</li>
+      <li><strong>Preferences</strong> — settings you save in the app, such as favorite sports and notification preferences.</li>
+    </ul>
+    <div class="subsection-title">2.2 Data We Collect Automatically</div>
+    <ul class="policy-list">
+      <li><strong>Device identifier</strong> — to manage sessions and send push notifications.</li>
+      <li><strong>Operating system and app version</strong> — to ensure compatibility and resolve technical issues.</li>
+      <li><strong>Usage history</strong> — signals viewed and features used, solely to improve the product.</li>
+      <li><strong>Diagnostic data</strong> — anonymous technical logs to identify and fix bugs.</li>
+    </ul>
+    <div class="subsection-title">2.3 Third-Party Data</div>
+    <ul class="policy-list">
+      <li><strong>Firebase (Google)</strong> — authentication, database, and push notifications.</li>
+      <li><strong>Sports data API</strong> — external sources used to generate signals. We do not share personal user data with these providers.</li>
+      <li><strong>Payment processors</strong> — Apple, Google, RevenueCat, or Stripe as applicable. TheAce does not store card details or banking information.</li>
+    </ul>
+    <p>We do not collect sensitive data such as health information, ethnic origin, religious beliefs, sexual orientation, or biometric data.</p>
+  </div>
+
+  <div class="section" id="en-3">
+    <div class="section-num">03</div>
+    <div class="section-title">How We Use Your Data</div>
+    <ul class="policy-list">
+      <li>Create and manage your user account.</li>
+      <li>Deliver sports signals and app content to you.</li>
+      <li>Send push notifications about matches and relevant signals, with your consent.</li>
+      <li>Manage your subscription and process payments.</li>
+      <li>Improve our machine learning model using anonymous usage patterns.</li>
+      <li>Resolve technical issues and ensure platform security.</li>
+      <li>Comply with applicable legal obligations.</li>
+    </ul>
+    <div class="highlight"><strong>Important:</strong> We do not use your data for third-party advertising, nor do we sell it to any external company.</div>
+  </div>
+
+  <div class="section" id="en-4">
+    <div class="section-num">04</div>
+    <div class="section-title">Legal Basis for Processing</div>
+    <ul class="policy-list">
+      <li><strong>Contract performance</strong> — to provide the services you requested when registering.</li>
+      <li><strong>Consent</strong> — for push notifications and marketing communications, revocable at any time.</li>
+      <li><strong>Legitimate interest</strong> — to improve the product, ensure security, and prevent fraud.</li>
+      <li><strong>Legal obligation</strong> — when the law requires us to retain or disclose information.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="en-5">
+    <div class="section-num">05</div>
+    <div class="section-title">Who We Share Your Data With</div>
+    <p>TheAce does not sell, rent, or commercialize your personal data. We only share information in the following cases:</p>
+    <ul class="policy-list">
+      <li><strong>Technology providers</strong> — Firebase (Google) for authentication and database, necessary for app operation.</li>
+      <li><strong>Payment processors</strong> — Apple, Google, RevenueCat, or Stripe to manage subscriptions.</li>
+      <li><strong>Legal authorities</strong> — when required by law or court order, we will disclose the minimum necessary information.</li>
+      <li><strong>Corporate transactions</strong> — in the event of a merger or acquisition, your data may be transferred to the new operator, who will be bound by this policy.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="en-6">
+    <div class="section-num">06</div>
+    <div class="section-title">Data Retention</div>
+    <ul class="policy-list">
+      <li><strong>Account data</strong> — while your account is active. Upon deletion, we will erase your data within 30 days.</li>
+      <li><strong>Anonymous usage data</strong> — may be retained indefinitely for statistical analysis.</li>
+      <li><strong>Transaction data</strong> — retained for the period required by applicable tax law (typically 5 to 7 years).</li>
+    </ul>
+  </div>
+
+  <div class="section" id="en-7">
+    <div class="section-num">07</div>
+    <div class="section-title">Your Rights</div>
+    <ul class="policy-list">
+      <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
+      <li><strong>Rectification</strong> — ask us to correct inaccurate or incomplete data.</li>
+      <li><strong>Erasure</strong> — request deletion of your data, subject to legal obligations.</li>
+      <li><strong>Portability</strong> — request your data in a structured, machine-readable format.</li>
+      <li><strong>Objection</strong> — object to processing based on legitimate interest.</li>
+      <li><strong>Withdraw consent</strong> — revoke consent for notifications or marketing at any time.</li>
+      <li><strong>Restriction</strong> — request that we limit processing in certain circumstances.</li>
+    </ul>
+    <p>To exercise these rights, contact us at <strong>cscpineda@gmail.com</strong>. We will respond within 30 days.</p>
+  </div>
+
+  <div class="section" id="en-8">
+    <div class="section-num">08</div>
+    <div class="section-title">Data Security</div>
+    <ul class="policy-list">
+      <li><strong>Encryption in transit</strong> — all communications use HTTPS/TLS.</li>
+      <li><strong>Encryption at rest</strong> — sensitive data is encrypted in our database.</li>
+      <li><strong>Secure authentication</strong> — passwords stored using secure hash functions.</li>
+      <li><strong>Restricted access</strong> — only authorized personnel may access user data.</li>
+      <li><strong>Security monitoring</strong> — we monitor our infrastructure for suspicious activity.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="en-9">
+    <div class="section-num">09</div>
+    <div class="section-title">International Data Transfers</div>
+    <p>Your data may be processed on servers outside your country of residence, including the United States where Firebase (Google) servers are hosted.</p>
+    <p>For EU users: transfers outside the European Economic Area are made under Standard Contractual Clauses approved by the European Commission.</p>
+    <p>For Brazilian users: data processing complies with the Lei Geral de Proteção de Dados (LGPD).</p>
+    <p>For California users: data processing complies with the California Consumer Privacy Act (CCPA).</p>
+  </div>
+
+  <div class="section" id="en-10">
+    <div class="section-num">10</div>
+    <div class="section-title">Minors</div>
+    <p>TheAce is not directed at persons under 18 years of age. We do not intentionally collect data from minors. If you believe your child has provided us with personal data, contact us at cscpineda@gmail.com and we will delete it immediately.</p>
+  </div>
+
+  <div class="section" id="en-11">
+    <div class="section-num">11</div>
+    <div class="section-title">Push Notifications</div>
+    <p>With your consent, TheAce may send you push notifications about sports signals, match results, and product updates. You can disable these at any time from your device settings or within the app.</p>
+  </div>
+
+  <div class="section" id="en-12">
+    <div class="section-num">12</div>
+    <div class="section-title">Cookies and Similar Technologies</div>
+    <p>TheAce's mobile app does not use web tracking cookies. We use session tokens and device identifiers to maintain your session and ensure the app functions correctly.</p>
+  </div>
+
+  <div class="section" id="en-13">
+    <div class="section-num">13</div>
+    <div class="section-title">Changes to This Policy</div>
+    <p>We may update this Privacy Policy periodically. When we make material changes, we will notify you through the app or by email at least 30 days in advance. The date of last update will always be visible at the top of this document.</p>
+  </div>
+
+  <div class="section" id="en-14">
+    <div class="section-num">14</div>
+    <div class="section-title">Contact</div>
+    <div class="contact-box">
+      <p>For questions or requests regarding this Privacy Policy:</p>
+      <br>
+      <p>📧 <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a></p>
+      <p>🌐 <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy/</a></p>
+      <br>
+      <p>We will respond within 30 business days.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== PORTUGUÊS BR ==================== -->
+<div class="content" id="lang-pt-br">
+<div class="container">
+  <div class="toc">
+    <div class="toc-title">Índice</div>
+    <ol>
+      <li><a href="#ptbr-1">Introdução</a></li>
+      <li><a href="#ptbr-2">Dados que coletamos</a></li>
+      <li><a href="#ptbr-3">Como usamos seus dados</a></li>
+      <li><a href="#ptbr-4">Base legal para o tratamento</a></li>
+      <li><a href="#ptbr-5">Com quem compartilhamos seus dados</a></li>
+      <li><a href="#ptbr-6">Retenção de dados</a></li>
+      <li><a href="#ptbr-7">Seus direitos</a></li>
+      <li><a href="#ptbr-8">Segurança dos dados</a></li>
+      <li><a href="#ptbr-9">Transferências internacionais</a></li>
+      <li><a href="#ptbr-10">Menores de idade</a></li>
+      <li><a href="#ptbr-11">Notificações push</a></li>
+      <li><a href="#ptbr-12">Cookies e tecnologias similares</a></li>
+      <li><a href="#ptbr-13">Alterações nesta política</a></li>
+      <li><a href="#ptbr-14">Contato</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="ptbr-1">
+    <div class="section-num">01</div>
+    <div class="section-title">Introdução</div>
+    <p>O TheAce ("nós", "nosso" ou "o aplicativo") é uma plataforma de inteligência esportiva que oferece sinais e previsões baseados em modelos de machine learning e inteligência artificial. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais ao utilizar nosso aplicativo móvel TheAce: Sinais Esportivos.</p>
+    <p>Ao baixar, registrar-se ou utilizar o TheAce, você concorda com as práticas descritas nesta política. Esta política está em conformidade com a Lei Geral de Proteção de Dados (LGPD) brasileira e demais legislações aplicáveis.</p>
+  </div>
+
+  <div class="section" id="ptbr-2">
+    <div class="section-num">02</div>
+    <div class="section-title">Dados que coletamos</div>
+    <div class="subsection-title">2.1 Dados que você nos fornece</div>
+    <ul class="policy-list">
+      <li><strong>Endereço de e-mail</strong> — usado para criar e gerenciar sua conta.</li>
+      <li><strong>Senha</strong> — armazenada de forma criptografada. Nunca em texto simples.</li>
+      <li><strong>Login social</strong> — se usar Google ou Apple, recebemos seu nome e e-mail conforme as políticas deles.</li>
+      <li><strong>Preferências</strong> — configurações salvas no app, como esportes favoritos e ajustes de notificação.</li>
+    </ul>
+    <div class="subsection-title">2.2 Dados coletados automaticamente</div>
+    <ul class="policy-list">
+      <li><strong>Identificador do dispositivo</strong> — para gerenciar sessões e enviar notificações push.</li>
+      <li><strong>Sistema operacional e versão</strong> — para garantir compatibilidade e resolver erros.</li>
+      <li><strong>Histórico de uso</strong> — sinais consultados e funcionalidades usadas, apenas para melhorar o produto.</li>
+      <li><strong>Dados de diagnóstico</strong> — registros técnicos anônimos para identificar e corrigir falhas.</li>
+    </ul>
+    <div class="subsection-title">2.3 Dados de terceiros</div>
+    <ul class="policy-list">
+      <li><strong>Firebase (Google)</strong> — autenticação, banco de dados e notificações push.</li>
+      <li><strong>API de dados esportivos</strong> — fontes externas para gerar sinais. Não compartilhamos dados pessoais com esses fornecedores.</li>
+      <li><strong>Processadores de pagamento</strong> — Apple, Google, RevenueCat ou Stripe conforme aplicável.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="ptbr-3">
+    <div class="section-num">03</div>
+    <div class="section-title">Como usamos seus dados</div>
+    <ul class="policy-list">
+      <li>Criar e gerenciar sua conta de usuário.</li>
+      <li>Entregar sinais esportivos e conteúdo do aplicativo.</li>
+      <li>Enviar notificações push sobre partidas e sinais relevantes, com seu consentimento.</li>
+      <li>Gerenciar sua assinatura e processar pagamentos.</li>
+      <li>Melhorar o modelo de machine learning com base em padrões de uso anônimos.</li>
+      <li>Resolver problemas técnicos e garantir a segurança da plataforma.</li>
+      <li>Cumprir obrigações legais aplicáveis.</li>
+    </ul>
+    <div class="highlight"><strong>Importante:</strong> Não usamos seus dados para publicidade de terceiros nem os vendemos a nenhuma empresa externa.</div>
+  </div>
+
+  <div class="section" id="ptbr-4">
+    <div class="section-num">04</div>
+    <div class="section-title">Base legal para o tratamento de dados</div>
+    <p>O tratamento de dados pelo TheAce está fundamentado nas bases legais previstas na LGPD (Lei nº 13.709/2018):</p>
+    <ul class="policy-list">
+      <li><strong>Execução de contrato</strong> — para prestar os serviços solicitados no cadastro.</li>
+      <li><strong>Consentimento</strong> — para notificações push e comunicações de marketing, revogável a qualquer momento.</li>
+      <li><strong>Legítimo interesse</strong> — para melhorar o produto, garantir a segurança e prevenir fraudes.</li>
+      <li><strong>Obrigação legal</strong> — quando a lei exigir a retenção ou divulgação de informações.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="ptbr-5">
+    <div class="section-num">05</div>
+    <div class="section-title">Com quem compartilhamos seus dados</div>
+    <p>O TheAce não vende, aluga nem comercializa seus dados pessoais. Compartilhamos informações apenas nos seguintes casos:</p>
+    <ul class="policy-list">
+      <li><strong>Provedores tecnológicos</strong> — Firebase (Google) para autenticação e banco de dados.</li>
+      <li><strong>Processadores de pagamento</strong> — Apple, Google, RevenueCat ou Stripe para gerenciar assinaturas.</li>
+      <li><strong>Autoridades legais</strong> — quando exigido por lei ou ordem judicial.</li>
+      <li><strong>Transações corporativas</strong> — em caso de fusão ou aquisição, seus dados podem ser transferidos ao novo operador.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="ptbr-6">
+    <div class="section-num">06</div>
+    <div class="section-title">Retenção de dados</div>
+    <ul class="policy-list">
+      <li><strong>Dados de conta</strong> — enquanto sua conta estiver ativa. Ao excluí-la, apagamos seus dados em até 30 dias.</li>
+      <li><strong>Dados de uso anônimos</strong> — podem ser retidos indefinidamente para análises estatísticas.</li>
+      <li><strong>Dados de transações</strong> — retidos pelo período exigido pela legislação fiscal brasileira (geralmente 5 anos).</li>
+    </ul>
+  </div>
+
+  <div class="section" id="ptbr-7">
+    <div class="section-num">07</div>
+    <div class="section-title">Seus direitos</div>
+    <p>Conforme a LGPD, você tem os seguintes direitos sobre seus dados pessoais:</p>
+    <ul class="policy-list">
+      <li><strong>Acesso</strong> — solicitar uma cópia dos dados pessoais que temos sobre você.</li>
+      <li><strong>Correção</strong> — pedir a correção de dados inexatos ou incompletos.</li>
+      <li><strong>Exclusão</strong> — solicitar a eliminação dos seus dados, sujeito a obrigações legais.</li>
+      <li><strong>Portabilidade</strong> — solicitar seus dados em formato estruturado e legível por máquina.</li>
+      <li><strong>Oposição</strong> — opor-se ao tratamento baseado em legítimo interesse.</li>
+      <li><strong>Revogar consentimento</strong> — retirar o consentimento para notificações ou marketing a qualquer momento.</li>
+      <li><strong>Informação</strong> — ser informado sobre as entidades com as quais seus dados foram compartilhados.</li>
+    </ul>
+    <p>Para exercer esses direitos, entre em contato pelo e-mail <strong>cscpineda@gmail.com</strong>. Responderemos em até 30 dias.</p>
+  </div>
+
+  <div class="section" id="ptbr-8">
+    <div class="section-num">08</div>
+    <div class="section-title">Segurança dos dados</div>
+    <ul class="policy-list">
+      <li><strong>Criptografia em trânsito</strong> — todas as comunicações usam HTTPS/TLS.</li>
+      <li><strong>Criptografia em repouso</strong> — dados sensíveis criptografados no banco de dados.</li>
+      <li><strong>Autenticação segura</strong> — senhas armazenadas com funções de hash seguras.</li>
+      <li><strong>Acesso restrito</strong> — apenas pessoal autorizado pode acessar dados de usuários.</li>
+      <li><strong>Monitoramento</strong> — monitoramos nossa infraestrutura para detectar atividades suspeitas.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="ptbr-9">
+    <div class="section-num">09</div>
+    <div class="section-title">Transferências internacionais de dados</div>
+    <p>Seus dados podem ser processados em servidores fora do Brasil, incluindo os Estados Unidos, onde estão hospedados os servidores do Firebase (Google). Essas transferências são realizadas em conformidade com os requisitos da LGPD para transferências internacionais de dados.</p>
+  </div>
+
+  <div class="section" id="ptbr-10">
+    <div class="section-num">10</div>
+    <div class="section-title">Menores de idade</div>
+    <p>O TheAce não é destinado a pessoas menores de 18 anos. Não coletamos intencionalmente dados de menores. Se acreditar que seu filho nos forneceu dados pessoais, entre em contato em cscpineda@gmail.com.</p>
+  </div>
+
+  <div class="section" id="ptbr-11">
+    <div class="section-num">11</div>
+    <div class="section-title">Notificações push</div>
+    <p>Com seu consentimento, o TheAce pode enviar notificações push sobre sinais esportivos, resultados e atualizações. Você pode desativá-las a qualquer momento nas configurações do dispositivo ou do aplicativo.</p>
+  </div>
+
+  <div class="section" id="ptbr-12">
+    <div class="section-num">12</div>
+    <div class="section-title">Cookies e tecnologias similares</div>
+    <p>O aplicativo móvel do TheAce não utiliza cookies de rastreamento web. Usamos tokens de sessão e identificadores de dispositivo para manter sua sessão ativa e garantir o funcionamento correto do app.</p>
+  </div>
+
+  <div class="section" id="ptbr-13">
+    <div class="section-num">13</div>
+    <div class="section-title">Alterações nesta política</div>
+    <p>Podemos atualizar esta Política de Privacidade periodicamente. Quando fizermos alterações materiais, notificaremos você pelo aplicativo ou por e-mail com pelo menos 30 dias de antecedência.</p>
+  </div>
+
+  <div class="section" id="ptbr-14">
+    <div class="section-num">14</div>
+    <div class="section-title">Contato</div>
+    <div class="contact-box">
+      <p>Para dúvidas ou solicitações sobre esta Política de Privacidade:</p>
+      <br>
+      <p>📧 <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a></p>
+      <p>🌐 <a href="https://spineda31.github.io/the-ace-privacy/e" target="_blank">spineda31.github.io/the-ace-privacy/e</a></p>
+      <br>
+      <p>Responderemos em até 30 dias úteis.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== PORTUGUÊS PT ==================== -->
+<div class="content" id="lang-pt-pt">
+<div class="container">
+  <div class="toc">
+    <div class="toc-title">Índice</div>
+    <ol>
+      <li><a href="#ptpt-1">Introdução</a></li>
+      <li><a href="#ptpt-2">Dados que recolhemos</a></li>
+      <li><a href="#ptpt-3">Como utilizamos os teus dados</a></li>
+      <li><a href="#ptpt-4">Base legal para o tratamento</a></li>
+      <li><a href="#ptpt-5">Com quem partilhamos os teus dados</a></li>
+      <li><a href="#ptpt-6">Retenção de dados</a></li>
+      <li><a href="#ptpt-7">Os teus direitos</a></li>
+      <li><a href="#ptpt-8">Segurança dos dados</a></li>
+      <li><a href="#ptpt-9">Transferências internacionais</a></li>
+      <li><a href="#ptpt-10">Menores de idade</a></li>
+      <li><a href="#ptpt-11">Notificações push</a></li>
+      <li><a href="#ptpt-12">Cookies e tecnologias similares</a></li>
+      <li><a href="#ptpt-13">Alterações a esta política</a></li>
+      <li><a href="#ptpt-14">Contacto</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="ptpt-1">
+    <div class="section-num">01</div>
+    <div class="section-title">Introdução</div>
+    <p>O TheAce ("nós", "nosso" ou "a aplicação") é uma plataforma de inteligência desportiva que oferece sinais e previsões baseados em modelos de machine learning e inteligência artificial. Esta Política de Privacidade descreve como recolhemos, utilizamos, armazenamos e protegemos as tuas informações pessoais quando utilizas a nossa aplicação móvel TheAce: Sinais Desportivos.</p>
+    <p>Ao descarregar, registar-te ou utilizar o TheAce, aceitas as práticas descritas nesta política. Esta política cumpre o Regulamento Geral sobre a Proteção de Dados (RGPD) e demais legislações aplicáveis.</p>
+  </div>
+
+  <div class="section" id="ptpt-2">
+    <div class="section-num">02</div>
+    <div class="section-title">Dados que recolhemos</div>
+    <div class="subsection-title">2.1 Dados que tu nos forneces</div>
+    <ul class="policy-list">
+      <li><strong>Endereço de e-mail</strong> — utilizado para criar e gerir a tua conta.</li>
+      <li><strong>Palavra-passe</strong> — armazenada de forma encriptada. Nunca em texto simples.</li>
+      <li><strong>Login social</strong> — se utilizares o Google ou Apple, recebemos o teu nome e e-mail de acordo com as respetivas políticas.</li>
+      <li><strong>Preferências</strong> — configurações que guardas na aplicação, como desportos favoritos e preferências de notificação.</li>
+    </ul>
+    <div class="subsection-title">2.2 Dados que recolhemos automaticamente</div>
+    <ul class="policy-list">
+      <li><strong>Identificador do dispositivo</strong> — para gerir sessões e enviar notificações push.</li>
+      <li><strong>Sistema operativo e versão</strong> — para garantir compatibilidade e resolver erros.</li>
+      <li><strong>Histórico de utilização</strong> — sinais consultados e funcionalidades utilizadas, apenas para melhorar o produto.</li>
+      <li><strong>Dados de diagnóstico</strong> — registos técnicos anónimos para identificar e corrigir falhas.</li>
+    </ul>
+    <div class="subsection-title">2.3 Dados de terceiros</div>
+    <ul class="policy-list">
+      <li><strong>Firebase (Google)</strong> — autenticação, base de dados e notificações push.</li>
+      <li><strong>API de dados desportivos</strong> — fontes externas para gerar sinais. Não partilhamos dados pessoais com estes fornecedores.</li>
+      <li><strong>Processadores de pagamento</strong> — Apple, Google, RevenueCat ou Stripe conforme aplicável.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="ptpt-3">
+    <div class="section-num">03</div>
+    <div class="section-title">Como utilizamos os teus dados</div>
+    <ul class="policy-list">
+      <li>Criar e gerir a tua conta de utilizador.</li>
+      <li>Entregar sinais desportivos e conteúdo da aplicação.</li>
+      <li>Enviar notificações push sobre jogos e sinais relevantes, com o teu consentimento.</li>
+      <li>Gerir a tua subscrição e processar pagamentos.</li>
+      <li>Melhorar o modelo de machine learning com base em padrões de utilização anónimos.</li>
+      <li>Resolver problemas técnicos e garantir a segurança da plataforma.</li>
+      <li>Cumprir obrigações legais aplicáveis.</li>
+    </ul>
+    <div class="highlight"><strong>Importante:</strong> Não utilizamos os teus dados para publicidade de terceiros nem os vendemos a nenhuma empresa externa.</div>
+  </div>
+
+  <div class="section" id="ptpt-4">
+    <div class="section-num">04</div>
+    <div class="section-title">Base legal para o tratamento de dados</div>
+    <ul class="policy-list">
+      <li><strong>Execução de contrato</strong> — para prestar os serviços solicitados no registo.</li>
+      <li><strong>Consentimento</strong> — para notificações push e comunicações de marketing, revogável a qualquer momento.</li>
+      <li><strong>Interesse legítimo</strong> — para melhorar o produto, garantir a segurança e prevenir fraudes.</li>
+      <li><strong>Obrigação legal</strong> — quando a lei exigir a retenção ou divulgação de informações.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="ptpt-5">
+    <div class="section-num">05</div>
+    <div class="section-title">Com quem partilhamos os teus dados</div>
+    <p>O TheAce não vende, aluga nem comercializa os teus dados pessoais. Partilhamos informações apenas nos seguintes casos:</p>
+    <ul class="policy-list">
+      <li><strong>Fornecedores tecnológicos</strong> — Firebase (Google) para autenticação e base de dados.</li>
+      <li><strong>Processadores de pagamento</strong> — Apple, Google, RevenueCat ou Stripe para gerir subscrições.</li>
+      <li><strong>Autoridades legais</strong> — quando exigido por lei ou ordem judicial.</li>
+      <li><strong>Transações empresariais</strong> — em caso de fusão ou aquisição, os teus dados podem ser transferidos ao novo operador.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="ptpt-6">
+    <div class="section-num">06</div>
+    <div class="section-title">Retenção de dados</div>
+    <ul class="policy-list">
+      <li><strong>Dados de conta</strong> — enquanto a tua conta estiver ativa. Ao eliminá-la, apagamos os teus dados em 30 dias.</li>
+      <li><strong>Dados de utilização anónimos</strong> — podem ser retidos indefinidamente para análises estatísticas.</li>
+      <li><strong>Dados de transações</strong> — retidos pelo período exigido pela legislação fiscal aplicável.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="ptpt-7">
+    <div class="section-num">07</div>
+    <div class="section-title">Os teus direitos</div>
+    <p>Ao abrigo do RGPD, tens os seguintes direitos sobre os teus dados pessoais:</p>
+    <ul class="policy-list">
+      <li><strong>Acesso</strong> — solicitar uma cópia dos dados pessoais que temos sobre ti.</li>
+      <li><strong>Retificação</strong> — pedir a correção de dados inexatos ou incompletos.</li>
+      <li><strong>Eliminação</strong> — solicitar a eliminação dos teus dados, sujeito a obrigações legais.</li>
+      <li><strong>Portabilidade</strong> — solicitar os teus dados em formato estruturado e legível por máquina.</li>
+      <li><strong>Oposição</strong> — opor-te ao tratamento baseado em interesse legítimo.</li>
+      <li><strong>Retirar consentimento</strong> — revogar o consentimento para notificações ou marketing a qualquer momento.</li>
+      <li><strong>Limitação</strong> — solicitar que limitemos o tratamento em certas circunstâncias.</li>
+    </ul>
+    <p>Para exercer estes direitos, contacta-nos em <strong>cscpineda@gmail.com</strong>. Responderemos no prazo máximo de 30 dias.</p>
+  </div>
+
+  <div class="section" id="ptpt-8">
+    <div class="section-num">08</div>
+    <div class="section-title">Segurança dos dados</div>
+    <ul class="policy-list">
+      <li><strong>Encriptação em trânsito</strong> — todas as comunicações utilizam HTTPS/TLS.</li>
+      <li><strong>Encriptação em repouso</strong> — dados sensíveis encriptados na base de dados.</li>
+      <li><strong>Autenticação segura</strong> — palavras-passe armazenadas com funções de hash seguras.</li>
+      <li><strong>Acesso restrito</strong> — apenas pessoal autorizado pode aceder a dados de utilizadores.</li>
+      <li><strong>Monitorização</strong> — monitorizamos a nossa infraestrutura para detetar atividades suspeitas.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="ptpt-9">
+    <div class="section-num">09</div>
+    <div class="section-title">Transferências internacionais de dados</div>
+    <p>Os teus dados podem ser processados em servidores fora da União Europeia, incluindo os Estados Unidos. Essas transferências são realizadas ao abrigo das Cláusulas Contratuais Tipo aprovadas pela Comissão Europeia, garantindo um nível adequado de proteção dos teus dados.</p>
+  </div>
+
+  <div class="section" id="ptpt-10">
+    <div class="section-num">10</div>
+    <div class="section-title">Menores de idade</div>
+    <p>O TheAce não se destina a pessoas com menos de 18 anos. Não recolhemos intencionalmente dados de menores. Se acreditares que o teu filho nos forneceu dados pessoais, contacta-nos em cscpineda@gmail.com.</p>
+  </div>
+
+  <div class="section" id="ptpt-11">
+    <div class="section-num">11</div>
+    <div class="section-title">Notificações push</div>
+    <p>Com o teu consentimento, o TheAce pode enviar-te notificações push sobre sinais desportivos, resultados e atualizações. Podes desativá-las a qualquer momento nas definições do dispositivo ou da aplicação.</p>
+  </div>
+
+  <div class="section" id="ptpt-12">
+    <div class="section-num">12</div>
+    <div class="section-title">Cookies e tecnologias similares</div>
+    <p>A aplicação móvel do TheAce não utiliza cookies de rastreamento web. Utilizamos tokens de sessão e identificadores de dispositivo para manter a tua sessão ativa e garantir o correto funcionamento da app.</p>
+  </div>
+
+  <div class="section" id="ptpt-13">
+    <div class="section-num">13</div>
+    <div class="section-title">Alterações a esta política</div>
+    <p>Podemos atualizar esta Política de Privacidade periodicamente. Quando fizermos alterações materiais, notificar-te-emos através da aplicação ou por e-mail com pelo menos 30 dias de antecedência.</p>
+  </div>
+
+  <div class="section" id="ptpt-14">
+    <div class="section-num">14</div>
+    <div class="section-title">Contacto</div>
+    <div class="contact-box">
+      <p>Para questões ou pedidos relativos a esta Política de Privacidade:</p>
+      <br>
+      <p>📧 <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a></p>
+      <p>🌐 <a href="https://spineda31.github.io/the-ace-privacy/e" target="_blank">spineda31.github.io/the-ace-privacy/e</a></p>
+      <br>
+      <p>Responderemos no prazo máximo de 30 dias úteis.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== DEUTSCH ==================== -->
+<div class="content" id="lang-de">
+<div class="container">
+  <div class="toc">
+    <div class="toc-title">Inhaltsverzeichnis</div>
+    <ol>
+      <li><a href="#de-1">Einleitung</a></li>
+      <li><a href="#de-2">Daten, die wir erheben</a></li>
+      <li><a href="#de-3">Wie wir deine Daten verwenden</a></li>
+      <li><a href="#de-4">Rechtsgrundlage der Verarbeitung</a></li>
+      <li><a href="#de-5">Weitergabe deiner Daten</a></li>
+      <li><a href="#de-6">Datenspeicherung</a></li>
+      <li><a href="#de-7">Deine Rechte</a></li>
+      <li><a href="#de-8">Datensicherheit</a></li>
+      <li><a href="#de-9">Internationale Datenübermittlungen</a></li>
+      <li><a href="#de-10">Minderjährige</a></li>
+      <li><a href="#de-11">Push-Benachrichtigungen</a></li>
+      <li><a href="#de-12">Cookies und ähnliche Technologien</a></li>
+      <li><a href="#de-13">Änderungen dieser Richtlinie</a></li>
+      <li><a href="#de-14">Kontakt</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="de-1">
+    <div class="section-num">01</div>
+    <div class="section-title">Einleitung</div>
+    <p>TheAce ("wir", "unser" oder "die App") ist eine Sport-Intelligence-Plattform, die Signale und Vorhersagen auf Basis von Machine-Learning- und KI-Modellen anbietet. Diese Datenschutzrichtlinie beschreibt, wie wir deine personenbezogenen Daten erheben, verwenden, speichern und schützen, wenn du die mobile App TheAce: Sportsignale nutzt.</p>
+    <p>Mit dem Herunterladen, der Registrierung oder der Nutzung von TheAce stimmst du den in dieser Richtlinie beschriebenen Praktiken zu. Diese Richtlinie entspricht der Datenschutz-Grundverordnung (DSGVO) und anderen anwendbaren Rechtsvorschriften.</p>
+  </div>
+
+  <div class="section" id="de-2">
+    <div class="section-num">02</div>
+    <div class="section-title">Daten, die wir erheben</div>
+    <div class="subsection-title">2.1 Daten, die du uns bereitstellst</div>
+    <ul class="policy-list">
+      <li><strong>E-Mail-Adresse</strong> — zur Erstellung und Verwaltung deines Kontos.</li>
+      <li><strong>Passwort</strong> — verschlüsselt gespeichert. Niemals im Klartext.</li>
+      <li><strong>Social Login</strong> — bei Nutzung von Google oder Apple erhalten wir deinen Namen und deine E-Mail gemäß deren Datenschutzrichtlinien.</li>
+      <li><strong>Einstellungen</strong> — in der App gespeicherte Konfigurationen wie Lieblingssportarten und Benachrichtigungseinstellungen.</li>
+    </ul>
+    <div class="subsection-title">2.2 Automatisch erhobene Daten</div>
+    <ul class="policy-list">
+      <li><strong>Gerätekennzeichen</strong> — zur Sitzungsverwaltung und zum Versand von Push-Benachrichtigungen.</li>
+      <li><strong>Betriebssystem und App-Version</strong> — zur Sicherstellung der Kompatibilität und Fehlerbehebung.</li>
+      <li><strong>Nutzungshistorie</strong> — aufgerufene Signale und genutzte Funktionen, ausschließlich zur Produktverbesserung.</li>
+      <li><strong>Diagnosedaten</strong> — anonyme technische Protokolle zur Fehlererkennung und -behebung.</li>
+    </ul>
+    <div class="subsection-title">2.3 Daten von Dritten</div>
+    <ul class="policy-list">
+      <li><strong>Firebase (Google)</strong> — Authentifizierung, Datenbank und Push-Benachrichtigungen.</li>
+      <li><strong>Sport-Daten-API</strong> — externe Quellen zur Signalgenerierung. Wir geben keine personenbezogenen Daten an diese Anbieter weiter.</li>
+      <li><strong>Zahlungsdienstleister</strong> — Apple, Google, RevenueCat oder Stripe. TheAce speichert keine Kreditkarten- oder Bankdaten.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="de-3">
+    <div class="section-num">03</div>
+    <div class="section-title">Wie wir deine Daten verwenden</div>
+    <ul class="policy-list">
+      <li>Erstellung und Verwaltung deines Nutzerkontos.</li>
+      <li>Bereitstellung von Sportsignalen und App-Inhalten.</li>
+      <li>Versand von Push-Benachrichtigungen über Matches und relevante Signale, mit deiner Einwilligung.</li>
+      <li>Verwaltung deines Abonnements und Zahlungsabwicklung.</li>
+      <li>Verbesserung des Machine-Learning-Modells auf Basis anonymer Nutzungsmuster.</li>
+      <li>Behebung technischer Probleme und Gewährleistung der Plattformsicherheit.</li>
+      <li>Einhaltung gesetzlicher Verpflichtungen.</li>
+    </ul>
+    <div class="highlight"><strong>Wichtig:</strong> Wir verwenden deine Daten nicht für Werbung Dritter und verkaufen sie nicht an externe Unternehmen.</div>
+  </div>
+
+  <div class="section" id="de-4">
+    <div class="section-num">04</div>
+    <div class="section-title">Rechtsgrundlage der Verarbeitung</div>
+    <ul class="policy-list">
+      <li><strong>Vertragserfüllung</strong> — zur Erbringung der bei der Registrierung beantragten Dienste.</li>
+      <li><strong>Einwilligung</strong> — für Push-Benachrichtigungen und Marketingmitteilungen, jederzeit widerrufbar.</li>
+      <li><strong>Berechtigte Interessen</strong> — zur Produktverbesserung, Sicherheitsgewährleistung und Betrugsprävention.</li>
+      <li><strong>Rechtliche Verpflichtung</strong> — wenn das Gesetz die Aufbewahrung oder Offenlegung von Informationen erfordert.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="de-5">
+    <div class="section-num">05</div>
+    <div class="section-title">Weitergabe deiner Daten</div>
+    <p>TheAce verkauft, vermietet oder vermarktet deine personenbezogenen Daten nicht. Wir geben Informationen nur in folgenden Fällen weiter:</p>
+    <ul class="policy-list">
+      <li><strong>Technologieanbieter</strong> — Firebase (Google) für Authentifizierung und Datenbank.</li>
+      <li><strong>Zahlungsdienstleister</strong> — Apple, Google, RevenueCat oder Stripe zur Abonnementverwaltung.</li>
+      <li><strong>Behörden</strong> — wenn gesetzlich oder durch Gerichtsbeschluss erforderlich.</li>
+      <li><strong>Unternehmenstransaktionen</strong> — im Falle einer Fusion oder Übernahme können deine Daten an den neuen Betreiber übertragen werden.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="de-6">
+    <div class="section-num">06</div>
+    <div class="section-title">Datenspeicherung</div>
+    <ul class="policy-list">
+      <li><strong>Kontodaten</strong> — solange dein Konto aktiv ist. Bei Löschung werden deine Daten innerhalb von 30 Tagen gelöscht.</li>
+      <li><strong>Anonyme Nutzungsdaten</strong> — können für statistische Analysen unbegrenzt aufbewahrt werden.</li>
+      <li><strong>Transaktionsdaten</strong> — aufbewahrt für den gesetzlich vorgeschriebenen Zeitraum (in der Regel 10 Jahre gemäß deutschem Steuerrecht).</li>
+    </ul>
+  </div>
+
+  <div class="section" id="de-7">
+    <div class="section-num">07</div>
+    <div class="section-title">Deine Rechte</div>
+    <p>Gemäß DSGVO hast du folgende Rechte bezüglich deiner personenbezogenen Daten:</p>
+    <ul class="policy-list">
+      <li><strong>Auskunft</strong> — Anforderung einer Kopie der über dich gespeicherten Daten.</li>
+      <li><strong>Berichtigung</strong> — Korrektur unrichtiger oder unvollständiger Daten.</li>
+      <li><strong>Löschung</strong> — Löschung deiner Daten, vorbehaltlich gesetzlicher Pflichten.</li>
+      <li><strong>Datenportabilität</strong> — Erhalt deiner Daten in einem strukturierten, maschinenlesbaren Format.</li>
+      <li><strong>Widerspruch</strong> — Widerspruch gegen die Verarbeitung auf Basis berechtigter Interessen.</li>
+      <li><strong>Widerruf der Einwilligung</strong> — jederzeit möglich für Benachrichtigungen oder Marketing.</li>
+      <li><strong>Einschränkung</strong> — Einschränkung der Verarbeitung unter bestimmten Umständen.</li>
+    </ul>
+    <p>Zur Ausübung dieser Rechte kontaktiere uns unter <strong>cscpineda@gmail.com</strong>. Wir antworten innerhalb von 30 Tagen. Bei Beschwerden hast du das Recht, dich an die zuständige Datenschutzbehörde zu wenden.</p>
+  </div>
+
+  <div class="section" id="de-8">
+    <div class="section-num">08</div>
+    <div class="section-title">Datensicherheit</div>
+    <ul class="policy-list">
+      <li><strong>Verschlüsselung bei der Übertragung</strong> — alle Kommunikationen verwenden HTTPS/TLS.</li>
+      <li><strong>Verschlüsselung im Ruhezustand</strong> — sensible Daten in unserer Datenbank verschlüsselt.</li>
+      <li><strong>Sichere Authentifizierung</strong> — Passwörter mit sicheren Hash-Funktionen gespeichert.</li>
+      <li><strong>Eingeschränkter Zugang</strong> — nur autorisiertes Personal kann auf Nutzerdaten zugreifen.</li>
+      <li><strong>Sicherheitsüberwachung</strong> — wir überwachen unsere Infrastruktur auf verdächtige Aktivitäten.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="de-9">
+    <div class="section-num">09</div>
+    <div class="section-title">Internationale Datenübermittlungen</div>
+    <p>Deine Daten können auf Servern außerhalb der EU verarbeitet werden, einschließlich der USA, wo Firebase-Server (Google) gehostet sind. Diese Übermittlungen erfolgen auf Grundlage der von der Europäischen Kommission genehmigten Standardvertragsklauseln.</p>
+  </div>
+
+  <div class="section" id="de-10">
+    <div class="section-num">10</div>
+    <div class="section-title">Minderjährige</div>
+    <p>TheAce richtet sich nicht an Personen unter 18 Jahren. Wir erheben nicht wissentlich Daten von Minderjährigen. Falls du glaubst, dass dein Kind uns personenbezogene Daten übermittelt hat, kontaktiere uns unter cscpineda@gmail.com.</p>
+  </div>
+
+  <div class="section" id="de-11">
+    <div class="section-num">11</div>
+    <div class="section-title">Push-Benachrichtigungen</div>
+    <p>Mit deiner Einwilligung kann TheAce dir Push-Benachrichtigungen über Sportsignale, Spielergebnisse und Updates senden. Du kannst diese jederzeit in den Geräteeinstellungen oder innerhalb der App deaktivieren.</p>
+  </div>
+
+  <div class="section" id="de-12">
+    <div class="section-num">12</div>
+    <div class="section-title">Cookies und ähnliche Technologien</div>
+    <p>Die mobile App von TheAce verwendet keine Web-Tracking-Cookies. Wir verwenden Sitzungs-Token und Gerätekennungen, um deine Sitzung aufrechtzuerhalten und die ordnungsgemäße Funktionsweise der App zu gewährleisten.</p>
+  </div>
+
+  <div class="section" id="de-13">
+    <div class="section-num">13</div>
+    <div class="section-title">Änderungen dieser Richtlinie</div>
+    <p>Wir können diese Datenschutzrichtlinie regelmäßig aktualisieren. Bei wesentlichen Änderungen werden wir dich über die App oder per E-Mail mindestens 30 Tage im Voraus benachrichtigen.</p>
+  </div>
+
+  <div class="section" id="de-14">
+    <div class="section-num">14</div>
+    <div class="section-title">Kontakt</div>
+    <div class="contact-box">
+      <p>Bei Fragen oder Anfragen zu dieser Datenschutzrichtlinie:</p>
+      <br>
+      <p>📧 <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a></p>
+      <p>🌐 <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy/</a></p>
+      <br>
+      <p>Wir antworten innerhalb von 30 Werktagen.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== FRANÇAIS ==================== -->
+<div class="content" id="lang-fr">
+<div class="container">
+  <div class="toc">
+    <div class="toc-title">Table des matières</div>
+    <ol>
+      <li><a href="#fr-1">Introduction</a></li>
+      <li><a href="#fr-2">Données que nous collectons</a></li>
+      <li><a href="#fr-3">Comment nous utilisons vos données</a></li>
+      <li><a href="#fr-4">Base légale du traitement</a></li>
+      <li><a href="#fr-5">Partage de vos données</a></li>
+      <li><a href="#fr-6">Conservation des données</a></li>
+      <li><a href="#fr-7">Vos droits</a></li>
+      <li><a href="#fr-8">Sécurité des données</a></li>
+      <li><a href="#fr-9">Transferts internationaux</a></li>
+      <li><a href="#fr-10">Mineurs</a></li>
+      <li><a href="#fr-11">Notifications push</a></li>
+      <li><a href="#fr-12">Cookies et technologies similaires</a></li>
+      <li><a href="#fr-13">Modifications de cette politique</a></li>
+      <li><a href="#fr-14">Contact</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="fr-1">
+    <div class="section-num">01</div>
+    <div class="section-title">Introduction</div>
+    <p>TheAce (« nous », « notre » ou « l'application ») est une plateforme d'intelligence sportive qui propose des signaux et des prédictions basés sur des modèles de machine learning et d'intelligence artificielle. Cette Politique de confidentialité décrit comment nous collectons, utilisons, stockons et protégeons vos informations personnelles lorsque vous utilisez notre application mobile TheAce : Signaux Sportifs.</p>
+    <p>En téléchargeant, en vous inscrivant ou en utilisant TheAce, vous acceptez les pratiques décrites dans cette politique. Cette politique est conforme au Règlement Général sur la Protection des Données (RGPD) et aux autres législations applicables.</p>
+  </div>
+
+  <div class="section" id="fr-2">
+    <div class="section-num">02</div>
+    <div class="section-title">Données que nous collectons</div>
+    <div class="subsection-title">2.1 Données que vous nous fournissez</div>
+    <ul class="policy-list">
+      <li><strong>Adresse e-mail</strong> — utilisée pour créer et gérer votre compte.</li>
+      <li><strong>Mot de passe</strong> — stocké sous forme chiffrée. Jamais en texte clair.</li>
+      <li><strong>Connexion sociale</strong> — si vous utilisez Google ou Apple, nous recevons votre nom et e-mail conformément à leurs politiques.</li>
+      <li><strong>Préférences</strong> — paramètres enregistrés dans l'app, comme les sports favoris et les préférences de notification.</li>
+    </ul>
+    <div class="subsection-title">2.2 Données collectées automatiquement</div>
+    <ul class="policy-list">
+      <li><strong>Identifiant d'appareil</strong> — pour gérer les sessions et envoyer des notifications push.</li>
+      <li><strong>Système d'exploitation et version</strong> — pour assurer la compatibilité et résoudre les erreurs.</li>
+      <li><strong>Historique d'utilisation</strong> — signaux consultés et fonctionnalités utilisées, uniquement pour améliorer le produit.</li>
+      <li><strong>Données de diagnostic</strong> — journaux techniques anonymes pour identifier et corriger les bugs.</li>
+    </ul>
+    <div class="subsection-title">2.3 Données de tiers</div>
+    <ul class="policy-list">
+      <li><strong>Firebase (Google)</strong> — authentification, base de données et notifications push.</li>
+      <li><strong>API de données sportives</strong> — sources externes pour générer les signaux. Nous ne partageons pas de données personnelles avec ces fournisseurs.</li>
+      <li><strong>Processeurs de paiement</strong> — Apple, Google, RevenueCat ou Stripe selon le cas.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="fr-3">
+    <div class="section-num">03</div>
+    <div class="section-title">Comment nous utilisons vos données</div>
+    <ul class="policy-list">
+      <li>Créer et gérer votre compte utilisateur.</li>
+      <li>Vous fournir les signaux sportifs et le contenu de l'application.</li>
+      <li>Vous envoyer des notifications push sur les matchs et signaux pertinents, avec votre consentement.</li>
+      <li>Gérer votre abonnement et traiter les paiements.</li>
+      <li>Améliorer le modèle de machine learning sur la base de patterns d'utilisation anonymes.</li>
+      <li>Résoudre les problèmes techniques et assurer la sécurité de la plateforme.</li>
+      <li>Respecter les obligations légales applicables.</li>
+    </ul>
+    <div class="highlight"><strong>Important :</strong> Nous n'utilisons pas vos données à des fins publicitaires tierces et ne les vendons à aucune entreprise externe.</div>
+  </div>
+
+  <div class="section" id="fr-4">
+    <div class="section-num">04</div>
+    <div class="section-title">Base légale du traitement</div>
+    <ul class="policy-list">
+      <li><strong>Exécution du contrat</strong> — pour fournir les services demandés lors de l'inscription.</li>
+      <li><strong>Consentement</strong> — pour les notifications push et communications marketing, révocable à tout moment.</li>
+      <li><strong>Intérêt légitime</strong> — pour améliorer le produit, assurer la sécurité et prévenir les fraudes.</li>
+      <li><strong>Obligation légale</strong> — lorsque la loi exige la conservation ou la divulgation d'informations.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="fr-5">
+    <div class="section-num">05</div>
+    <div class="section-title">Partage de vos données</div>
+    <p>TheAce ne vend, ne loue ni ne commercialise vos données personnelles. Nous ne partageons des informations que dans les cas suivants :</p>
+    <ul class="policy-list">
+      <li><strong>Fournisseurs technologiques</strong> — Firebase (Google) pour l'authentification et la base de données.</li>
+      <li><strong>Processeurs de paiement</strong> — Apple, Google, RevenueCat ou Stripe pour gérer les abonnements.</li>
+      <li><strong>Autorités légales</strong> — lorsque la loi ou une décision judiciaire l'exige.</li>
+      <li><strong>Transactions d'entreprise</strong> — en cas de fusion ou d'acquisition, vos données peuvent être transférées au nouvel opérateur.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="fr-6">
+    <div class="section-num">06</div>
+    <div class="section-title">Conservation des données</div>
+    <ul class="policy-list">
+      <li><strong>Données de compte</strong> — tant que votre compte est actif. À sa suppression, nous effaçons vos données dans un délai de 30 jours.</li>
+      <li><strong>Données d'utilisation anonymes</strong> — peuvent être conservées indéfiniment à des fins statistiques.</li>
+      <li><strong>Données de transaction</strong> — conservées pour la durée requise par la législation fiscale applicable.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="fr-7">
+    <div class="section-num">07</div>
+    <div class="section-title">Vos droits</div>
+    <p>Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :</p>
+    <ul class="policy-list">
+      <li><strong>Accès</strong> — demander une copie des données personnelles que nous détenons sur vous.</li>
+      <li><strong>Rectification</strong> — demander la correction de données inexactes ou incomplètes.</li>
+      <li><strong>Effacement</strong> — demander la suppression de vos données, sous réserve des obligations légales.</li>
+      <li><strong>Portabilité</strong> — recevoir vos données dans un format structuré et lisible par machine.</li>
+      <li><strong>Opposition</strong> — vous opposer au traitement basé sur l'intérêt légitime.</li>
+      <li><strong>Retrait du consentement</strong> — révoquer à tout moment le consentement pour les notifications ou le marketing.</li>
+      <li><strong>Limitation</strong> — demander la limitation du traitement dans certaines circonstances.</li>
+    </ul>
+    <p>Pour exercer ces droits, contactez-nous à <strong>cscpineda@gmail.com</strong>. Nous répondrons dans un délai de 30 jours.</p>
+  </div>
+
+  <div class="section" id="fr-8">
+    <div class="section-num">08</div>
+    <div class="section-title">Sécurité des données</div>
+    <ul class="policy-list">
+      <li><strong>Chiffrement en transit</strong> — toutes les communications utilisent HTTPS/TLS.</li>
+      <li><strong>Chiffrement au repos</strong> — les données sensibles sont chiffrées dans notre base de données.</li>
+      <li><strong>Authentification sécurisée</strong> — mots de passe stockés avec des fonctions de hachage sécurisées.</li>
+      <li><strong>Accès restreint</strong> — seul le personnel autorisé peut accéder aux données des utilisateurs.</li>
+      <li><strong>Surveillance</strong> — nous surveillons notre infrastructure pour détecter les activités suspectes.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="fr-9">
+    <div class="section-num">09</div>
+    <div class="section-title">Transferts internationaux de données</div>
+    <p>Vos données peuvent être traitées sur des serveurs situés en dehors de l'Union Européenne, notamment aux États-Unis où sont hébergés les serveurs Firebase (Google). Ces transferts sont effectués dans le cadre des Clauses Contractuelles Types approuvées par la Commission Européenne.</p>
+  </div>
+
+  <div class="section" id="fr-10">
+    <div class="section-num">10</div>
+    <div class="section-title">Mineurs</div>
+    <p>TheAce ne s'adresse pas aux personnes de moins de 18 ans. Nous ne collectons pas intentionnellement de données de mineurs. Si vous pensez que votre enfant nous a fourni des données personnelles, contactez-nous à cscpineda@gmail.com.</p>
+  </div>
+
+  <div class="section" id="fr-11">
+    <div class="section-num">11</div>
+    <div class="section-title">Notifications push</div>
+    <p>Avec votre consentement, TheAce peut vous envoyer des notifications push sur les signaux sportifs, les résultats et les mises à jour. Vous pouvez les désactiver à tout moment dans les paramètres de votre appareil ou de l'application.</p>
+  </div>
+
+  <div class="section" id="fr-12">
+    <div class="section-num">12</div>
+    <div class="section-title">Cookies et technologies similaires</div>
+    <p>L'application mobile de TheAce n'utilise pas de cookies de suivi web. Nous utilisons des jetons de session et des identifiants d'appareil pour maintenir votre session active et assurer le bon fonctionnement de l'app.</p>
+  </div>
+
+  <div class="section" id="fr-13">
+    <div class="section-num">13</div>
+    <div class="section-title">Modifications de cette politique</div>
+    <p>Nous pouvons mettre à jour cette Politique de confidentialité périodiquement. Lors de modifications importantes, nous vous en informerons via l'application ou par e-mail avec au moins 30 jours de préavis.</p>
+  </div>
+
+  <div class="section" id="fr-14">
+    <div class="section-num">14</div>
+    <div class="section-title">Contact</div>
+    <div class="contact-box">
+      <p>Pour toute question ou demande concernant cette Politique de confidentialité :</p>
+      <br>
+      <p>📧 <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a></p>
+      <p>🌐 <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy/</a></p>
+      <br>
+      <p>Nous répondrons dans un délai de 30 jours ouvrables.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== ITALIANO ==================== -->
+<div class="content" id="lang-it">
+<div class="container">
+  <div class="toc">
+    <div class="toc-title">Indice</div>
+    <ol>
+      <li><a href="#it-1">Introduzione</a></li>
+      <li><a href="#it-2">Dati che raccogliamo</a></li>
+      <li><a href="#it-3">Come utilizziamo i tuoi dati</a></li>
+      <li><a href="#it-4">Base giuridica del trattamento</a></li>
+      <li><a href="#it-5">Con chi condividiamo i tuoi dati</a></li>
+      <li><a href="#it-6">Conservazione dei dati</a></li>
+      <li><a href="#it-7">I tuoi diritti</a></li>
+      <li><a href="#it-8">Sicurezza dei dati</a></li>
+      <li><a href="#it-9">Trasferimenti internazionali</a></li>
+      <li><a href="#it-10">Minori</a></li>
+      <li><a href="#it-11">Notifiche push</a></li>
+      <li><a href="#it-12">Cookie e tecnologie simili</a></li>
+      <li><a href="#it-13">Modifiche a questa informativa</a></li>
+      <li><a href="#it-14">Contatti</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="it-1">
+    <div class="section-num">01</div>
+    <div class="section-title">Introduzione</div>
+    <p>TheAce ("noi", "nostro" o "l'applicazione") è una piattaforma di intelligenza sportiva che offre segnali e previsioni basati su modelli di machine learning e intelligenza artificiale. Questa Informativa sulla privacy descrive come raccogliamo, utilizziamo, conserviamo e proteggiamo le tue informazioni personali quando utilizzi la nostra app mobile TheAce: Segnali Sportivi.</p>
+    <p>Scaricando, registrandoti o utilizzando TheAce, accetti le pratiche descritte in questa informativa. Questa informativa è conforme al Regolamento Generale sulla Protezione dei Dati (GDPR) e alle altre normative applicabili.</p>
+  </div>
+
+  <div class="section" id="it-2">
+    <div class="section-num">02</div>
+    <div class="section-title">Dati che raccogliamo</div>
+    <div class="subsection-title">2.1 Dati che tu ci fornisci</div>
+    <ul class="policy-list">
+      <li><strong>Indirizzo e-mail</strong> — utilizzato per creare e gestire il tuo account.</li>
+      <li><strong>Password</strong> — conservata in forma crittografata. Mai in testo normale.</li>
+      <li><strong>Accesso social</strong> — se utilizzi Google o Apple, riceviamo il tuo nome e la tua e-mail secondo le loro politiche.</li>
+      <li><strong>Preferenze</strong> — impostazioni salvate nell'app, come sport preferiti e preferenze di notifica.</li>
+    </ul>
+    <div class="subsection-title">2.2 Dati raccolti automaticamente</div>
+    <ul class="policy-list">
+      <li><strong>Identificatore del dispositivo</strong> — per gestire le sessioni e inviare notifiche push.</li>
+      <li><strong>Sistema operativo e versione</strong> — per garantire compatibilità e risolvere errori.</li>
+      <li><strong>Cronologia di utilizzo</strong> — segnali consultati e funzionalità utilizzate, solo per migliorare il prodotto.</li>
+      <li><strong>Dati diagnostici</strong> — log tecnici anonimi per identificare e correggere bug.</li>
+    </ul>
+    <div class="subsection-title">2.3 Dati di terze parti</div>
+    <ul class="policy-list">
+      <li><strong>Firebase (Google)</strong> — autenticazione, database e notifiche push.</li>
+      <li><strong>API dati sportivi</strong> — fonti esterne per generare segnali. Non condividiamo dati personali con questi fornitori.</li>
+      <li><strong>Processori di pagamento</strong> — Apple, Google, RevenueCat o Stripe secondo il caso.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="it-3">
+    <div class="section-num">03</div>
+    <div class="section-title">Come utilizziamo i tuoi dati</div>
+    <ul class="policy-list">
+      <li>Creare e gestire il tuo account utente.</li>
+      <li>Fornirti segnali sportivi e contenuti dell'applicazione.</li>
+      <li>Inviarti notifiche push su partite e segnali rilevanti, con il tuo consenso.</li>
+      <li>Gestire il tuo abbonamento ed elaborare i pagamenti.</li>
+      <li>Migliorare il modello di machine learning sulla base di pattern di utilizzo anonimi.</li>
+      <li>Risolvere problemi tecnici e garantire la sicurezza della piattaforma.</li>
+      <li>Adempiere agli obblighi legali applicabili.</li>
+    </ul>
+    <div class="highlight"><strong>Importante:</strong> Non utilizziamo i tuoi dati per pubblicità di terze parti né li vendiamo ad alcuna azienda esterna.</div>
+  </div>
+
+  <div class="section" id="it-4">
+    <div class="section-num">04</div>
+    <div class="section-title">Base giuridica del trattamento</div>
+    <ul class="policy-list">
+      <li><strong>Esecuzione del contratto</strong> — per fornire i servizi richiesti al momento della registrazione.</li>
+      <li><strong>Consenso</strong> — per notifiche push e comunicazioni di marketing, revocabile in qualsiasi momento.</li>
+      <li><strong>Legittimo interesse</strong> — per migliorare il prodotto, garantire la sicurezza e prevenire frodi.</li>
+      <li><strong>Obbligo legale</strong> — quando la legge richiede la conservazione o la divulgazione di informazioni.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="it-5">
+    <div class="section-num">05</div>
+    <div class="section-title">Con chi condividiamo i tuoi dati</div>
+    <p>TheAce non vende, affitta né commercializza i tuoi dati personali. Condividiamo informazioni solo nei seguenti casi:</p>
+    <ul class="policy-list">
+      <li><strong>Fornitori tecnologici</strong> — Firebase (Google) per autenticazione e database.</li>
+      <li><strong>Processori di pagamento</strong> — Apple, Google, RevenueCat o Stripe per gestire gli abbonamenti.</li>
+      <li><strong>Autorità legali</strong> — quando richiesto dalla legge o da un ordine giudiziario.</li>
+      <li><strong>Operazioni societarie</strong> — in caso di fusione o acquisizione, i tuoi dati potrebbero essere trasferiti al nuovo operatore.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="it-6">
+    <div class="section-num">06</div>
+    <div class="section-title">Conservazione dei dati</div>
+    <ul class="policy-list">
+      <li><strong>Dati dell'account</strong> — finché il tuo account è attivo. All'eliminazione, cancelleremo i tuoi dati entro 30 giorni.</li>
+      <li><strong>Dati di utilizzo anonimi</strong> — possono essere conservati indefinitamente per analisi statistiche.</li>
+      <li><strong>Dati sulle transazioni</strong> — conservati per il periodo richiesto dalla normativa fiscale applicabile.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="it-7">
+    <div class="section-num">07</div>
+    <div class="section-title">I tuoi diritti</div>
+    <p>Ai sensi del GDPR, hai i seguenti diritti sui tuoi dati personali:</p>
+    <ul class="policy-list">
+      <li><strong>Accesso</strong> — richiedere una copia dei dati personali che deteniamo su di te.</li>
+      <li><strong>Rettifica</strong> — chiedere la correzione di dati inesatti o incompleti.</li>
+      <li><strong>Cancellazione</strong> — richiedere la cancellazione dei tuoi dati, fatti salvi gli obblighi legali.</li>
+      <li><strong>Portabilità</strong> — ricevere i tuoi dati in un formato strutturato e leggibile dalla macchina.</li>
+      <li><strong>Opposizione</strong> — opporti al trattamento basato su legittimo interesse.</li>
+      <li><strong>Revoca del consenso</strong> — revocare in qualsiasi momento il consenso per notifiche o marketing.</li>
+      <li><strong>Limitazione</strong> — richiedere la limitazione del trattamento in determinate circostanze.</li>
+    </ul>
+    <p>Per esercitare questi diritti, contattaci a <strong>cscpineda@gmail.com</strong>. Risponderemo entro 30 giorni.</p>
+  </div>
+
+  <div class="section" id="it-8">
+    <div class="section-num">08</div>
+    <div class="section-title">Sicurezza dei dati</div>
+    <ul class="policy-list">
+      <li><strong>Crittografia in transito</strong> — tutte le comunicazioni utilizzano HTTPS/TLS.</li>
+      <li><strong>Crittografia a riposo</strong> — i dati sensibili sono crittografati nel nostro database.</li>
+      <li><strong>Autenticazione sicura</strong> — password memorizzate con funzioni di hash sicure.</li>
+      <li><strong>Accesso limitato</strong> — solo il personale autorizzato può accedere ai dati degli utenti.</li>
+      <li><strong>Monitoraggio</strong> — monitoriamo la nostra infrastruttura per rilevare attività sospette.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="it-9">
+    <div class="section-num">09</div>
+    <div class="section-title">Trasferimenti internazionali di dati</div>
+    <p>I tuoi dati possono essere elaborati su server al di fuori dell'Unione Europea, inclusi gli Stati Uniti dove sono ospitati i server Firebase (Google). Questi trasferimenti vengono effettuati nel rispetto delle Clausole Contrattuali Standard approvate dalla Commissione Europea.</p>
+  </div>
+
+  <div class="section" id="it-10">
+    <div class="section-num">10</div>
+    <div class="section-title">Minori</div>
+    <p>TheAce non è destinata a persone di età inferiore ai 18 anni. Non raccogliamo intenzionalmente dati di minori. Se ritieni che tuo figlio ci abbia fornito dati personali, contattaci a cscpineda@gmail.com.</p>
+  </div>
+
+  <div class="section" id="it-11">
+    <div class="section-num">11</div>
+    <div class="section-title">Notifiche push</div>
+    <p>Con il tuo consenso, TheAce può inviarti notifiche push su segnali sportivi, risultati e aggiornamenti. Puoi disattivarle in qualsiasi momento dalle impostazioni del dispositivo o dell'app.</p>
+  </div>
+
+  <div class="section" id="it-12">
+    <div class="section-num">12</div>
+    <div class="section-title">Cookie e tecnologie simili</div>
+    <p>L'app mobile di TheAce non utilizza cookie di tracciamento web. Utilizziamo token di sessione e identificatori del dispositivo per mantenere attiva la tua sessione e garantire il corretto funzionamento dell'app.</p>
+  </div>
+
+  <div class="section" id="it-13">
+    <div class="section-num">13</div>
+    <div class="section-title">Modifiche a questa informativa</div>
+    <p>Potremmo aggiornare periodicamente questa Informativa sulla privacy. In caso di modifiche sostanziali, ti notificheremo tramite l'app o via e-mail con almeno 30 giorni di preavviso.</p>
+  </div>
+
+  <div class="section" id="it-14">
+    <div class="section-num">14</div>
+    <div class="section-title">Contatti</div>
+    <div class="contact-box">
+      <p>Per domande o richieste relative a questa Informativa sulla privacy:</p>
+      <br>
+      <p>📧 <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a></p>
+      <p>🌐 <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy/</a></p>
+      <br>
+      <p>Risponderemo entro 30 giorni lavorativi.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== 中文 ==================== -->
+<div class="content" id="lang-zh">
+<div class="container">
+  <div class="toc">
+    <div class="toc-title">目录</div>
+    <ol>
+      <li><a href="#zh-1">简介</a></li>
+      <li><a href="#zh-2">我们收集的数据</a></li>
+      <li><a href="#zh-3">我们如何使用您的数据</a></li>
+      <li><a href="#zh-4">处理数据的法律依据</a></li>
+      <li><a href="#zh-5">数据共享</a></li>
+      <li><a href="#zh-6">数据保留</a></li>
+      <li><a href="#zh-7">您的权利</a></li>
+      <li><a href="#zh-8">数据安全</a></li>
+      <li><a href="#zh-9">国际数据传输</a></li>
+      <li><a href="#zh-10">未成年人</a></li>
+      <li><a href="#zh-11">推送通知</a></li>
+      <li><a href="#zh-12">Cookie及类似技术</a></li>
+      <li><a href="#zh-13">政策变更</a></li>
+      <li><a href="#zh-14">联系方式</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="zh-1">
+    <div class="section-num">01</div>
+    <div class="section-title">简介</div>
+    <p>TheAce（"我们"或"本应用"）是一款基于机器学习和人工智能模型提供体育信号和预测的智能体育平台。本隐私政策说明了当您使用我们的移动应用程序 TheAce: 体育信号时，我们如何收集、使用、存储和保护您的个人信息。</p>
+    <p>下载、注册或使用 TheAce，即表示您同意本政策中描述的做法。</p>
+  </div>
+
+  <div class="section" id="zh-2">
+    <div class="section-num">02</div>
+    <div class="section-title">我们收集的数据</div>
+    <div class="subsection-title">2.1 您主动提供的数据</div>
+    <ul class="policy-list">
+      <li><strong>电子邮件地址</strong> — 用于创建和管理您的账户。</li>
+      <li><strong>密码</strong> — 加密存储，从不以明文形式保存。</li>
+      <li><strong>社交登录</strong> — 如果您使用 Google 或 Apple 登录，我们将根据其隐私政策获取您的姓名和电子邮件。</li>
+      <li><strong>偏好设置</strong> — 您在应用中保存的配置，如喜爱的运动项目和通知偏好。</li>
+    </ul>
+    <div class="subsection-title">2.2 自动收集的数据</div>
+    <ul class="policy-list">
+      <li><strong>设备标识符</strong> — 用于管理会话和发送推送通知。</li>
+      <li><strong>操作系统和应用版本</strong> — 确保兼容性并解决技术问题。</li>
+      <li><strong>使用记录</strong> — 查看的信号和使用的功能，仅用于改善产品。</li>
+      <li><strong>诊断数据</strong> — 匿名技术日志，用于识别和修复错误。</li>
+    </ul>
+    <div class="subsection-title">2.3 第三方数据</div>
+    <ul class="policy-list">
+      <li><strong>Firebase（Google）</strong> — 身份验证、数据库和推送通知。</li>
+      <li><strong>体育数据 API</strong> — 用于生成信号的外部数据源。我们不会与这些提供商共享个人数据。</li>
+      <li><strong>支付处理商</strong> — Apple、Google、RevenueCat 或 Stripe。TheAce 不存储银行卡或银行信息。</li>
+    </ul>
+  </div>
+
+  <div class="section" id="zh-3">
+    <div class="section-num">03</div>
+    <div class="section-title">我们如何使用您的数据</div>
+    <ul class="policy-list">
+      <li>创建和管理您的用户账户。</li>
+      <li>向您提供体育信号和应用内容。</li>
+      <li>在您同意的情况下，发送关于比赛和相关信号的推送通知。</li>
+      <li>管理您的订阅并处理付款。</li>
+      <li>基于匿名使用模式改善机器学习模型。</li>
+      <li>解决技术问题并确保平台安全。</li>
+      <li>履行适用的法律义务。</li>
+    </ul>
+    <div class="highlight"><strong>重要提示：</strong>我们不会将您的数据用于第三方广告，也不会将其出售给任何外部公司。</div>
+  </div>
+
+  <div class="section" id="zh-4">
+    <div class="section-num">04</div>
+    <div class="section-title">处理数据的法律依据</div>
+    <ul class="policy-list">
+      <li><strong>合同履行</strong> — 提供您注册时申请的服务。</li>
+      <li><strong>同意</strong> — 用于推送通知和营销通信，可随时撤回。</li>
+      <li><strong>合法利益</strong> — 改善产品、保障安全和防止欺诈。</li>
+      <li><strong>法律义务</strong> — 法律要求保留或披露信息时。</li>
+    </ul>
+  </div>
+
+  <div class="section" id="zh-5">
+    <div class="section-num">05</div>
+    <div class="section-title">数据共享</div>
+    <p>TheAce 不出售、出租或商业化您的个人数据。我们仅在以下情况下共享信息：</p>
+    <ul class="policy-list">
+      <li><strong>技术服务提供商</strong> — Firebase（Google）用于身份验证和数据库。</li>
+      <li><strong>支付处理商</strong> — Apple、Google、RevenueCat 或 Stripe 用于管理订阅。</li>
+      <li><strong>法律机构</strong> — 在法律或法院命令要求时。</li>
+      <li><strong>企业交易</strong> — 如发生合并或收购，您的数据可能转移至新运营方。</li>
+    </ul>
+  </div>
+
+  <div class="section" id="zh-6">
+    <div class="section-num">06</div>
+    <div class="section-title">数据保留</div>
+    <ul class="policy-list">
+      <li><strong>账户数据</strong> — 账户有效期间保留。删除账户后，我们将在30天内删除您的数据。</li>
+      <li><strong>匿名使用数据</strong> — 可无限期保留用于统计分析。</li>
+      <li><strong>交易数据</strong> — 按适用税法要求的期限保留（通常为5至7年）。</li>
+    </ul>
+  </div>
+
+  <div class="section" id="zh-7">
+    <div class="section-num">07</div>
+    <div class="section-title">您的权利</div>
+    <ul class="policy-list">
+      <li><strong>访问权</strong> — 请求获取我们持有的您的个人数据副本。</li>
+      <li><strong>更正权</strong> — 要求更正不准确或不完整的数据。</li>
+      <li><strong>删除权</strong> — 在符合法律义务的前提下，请求删除您的数据。</li>
+      <li><strong>数据可携带权</strong> — 以结构化、机器可读的格式获取您的数据。</li>
+      <li><strong>反对权</strong> — 反对基于合法利益的数据处理。</li>
+      <li><strong>撤回同意</strong> — 随时撤回对通知或营销的同意。</li>
+    </ul>
+    <p>如需行使上述权利，请发送邮件至 <strong>cscpineda@gmail.com</strong>。我们将在30天内答复。</p>
+  </div>
+
+  <div class="section" id="zh-8">
+    <div class="section-num">08</div>
+    <div class="section-title">数据安全</div>
+    <ul class="policy-list">
+      <li><strong>传输加密</strong> — 所有通信使用 HTTPS/TLS。</li>
+      <li><strong>静态加密</strong> — 数据库中的敏感数据已加密。</li>
+      <li><strong>安全认证</strong> — 密码使用安全哈希函数存储。</li>
+      <li><strong>访问限制</strong> — 仅授权人员可访问用户数据。</li>
+      <li><strong>安全监控</strong> — 我们监控基础设施以检测可疑活动。</li>
+    </ul>
+  </div>
+
+  <div class="section" id="zh-9">
+    <div class="section-num">09</div>
+    <div class="section-title">国际数据传输</div>
+    <p>您的数据可能在您所在国家以外的服务器上处理，包括托管 Firebase（Google）服务器的美国。我们采取适当的保障措施确保您的数据得到充分保护。</p>
+  </div>
+
+  <div class="section" id="zh-10">
+    <div class="section-num">10</div>
+    <div class="section-title">未成年人</div>
+    <p>TheAce 不面向18岁以下人士。我们不会故意收集未成年人的数据。如果您认为您的孩子向我们提供了个人数据，请联系 cscpineda@gmail.com。</p>
+  </div>
+
+  <div class="section" id="zh-11">
+    <div class="section-num">11</div>
+    <div class="section-title">推送通知</div>
+    <p>在您同意的情况下，TheAce 可向您发送关于体育信号、比赛结果和产品更新的推送通知。您可随时通过设备设置或应用内设置关闭通知。</p>
+  </div>
+
+  <div class="section" id="zh-12">
+    <div class="section-num">12</div>
+    <div class="section-title">Cookie及类似技术</div>
+    <p>TheAce 移动应用不使用网络追踪 Cookie。我们使用会话令牌和设备标识符来维持您的会话并确保应用正常运行。</p>
+  </div>
+
+  <div class="section" id="zh-13">
+    <div class="section-num">13</div>
+    <div class="section-title">政策变更</div>
+    <p>我们可能会定期更新本隐私政策。当发生重大变更时，我们将通过应用或电子邮件提前至少30天通知您。</p>
+  </div>
+
+  <div class="section" id="zh-14">
+    <div class="section-num">14</div>
+    <div class="section-title">联系方式</div>
+    <div class="contact-box">
+      <p>如有关于本隐私政策的问题或请求：</p>
+      <br>
+      <p>📧 <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a></p>
+      <p>🌐 <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy/</a></p>
+      <br>
+      <p>我们将在30个工作日内回复。</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== हिंदी ==================== -->
+<div class="content" id="lang-hi">
+<div class="container">
+  <div class="toc">
+    <div class="toc-title">विषय सूची</div>
+    <ol>
+      <li><a href="#hi-1">परिचय</a></li>
+      <li><a href="#hi-2">हम कौन सा डेटा एकत्र करते हैं</a></li>
+      <li><a href="#hi-3">हम आपके डेटा का उपयोग कैसे करते हैं</a></li>
+      <li><a href="#hi-4">डेटा प्रोसेसिंग का कानूनी आधार</a></li>
+      <li><a href="#hi-5">डेटा साझाकरण</a></li>
+      <li><a href="#hi-6">डेटा प्रतिधारण</a></li>
+      <li><a href="#hi-7">आपके अधिकार</a></li>
+      <li><a href="#hi-8">डेटा सुरक्षा</a></li>
+      <li><a href="#hi-9">अंतर्राष्ट्रीय डेटा स्थानांतरण</a></li>
+      <li><a href="#hi-10">नाबालिग</a></li>
+      <li><a href="#hi-11">पुश नोटिफिकेशन</a></li>
+      <li><a href="#hi-12">कुकीज़ और समान तकनीकें</a></li>
+      <li><a href="#hi-13">नीति में बदलाव</a></li>
+      <li><a href="#hi-14">संपर्क</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="hi-1">
+    <div class="section-num">01</div>
+    <div class="section-title">परिचय</div>
+    <p>TheAce ("हम", "हमारा" या "ऐप") एक स्पोर्ट्स इंटेलिजेंस प्लेटफॉर्म है जो मशीन लर्निंग और आर्टिफिशियल इंटेलिजेंस मॉडल पर आधारित सिग्नल और प्रेडिक्शन प्रदान करता है। यह गोपनीयता नीति बताती है कि जब आप हमारे मोबाइल एप्लिकेशन TheAce: स्पोर्ट्स सिग्नल का उपयोग करते हैं, तो हम आपकी व्यक्तिगत जानकारी को कैसे एकत्र, उपयोग, संग्रहीत और सुरक्षित करते हैं।</p>
+    <p>TheAce को डाउनलोड करके, रजिस्टर करके या उपयोग करके, आप इस नीति में वर्णित प्रथाओं से सहमत होते हैं।</p>
+  </div>
+
+  <div class="section" id="hi-2">
+    <div class="section-num">02</div>
+    <div class="section-title">हम कौन सा डेटा एकत्र करते हैं</div>
+    <div class="subsection-title">2.1 वह डेटा जो आप हमें प्रदान करते हैं</div>
+    <ul class="policy-list">
+      <li><strong>ईमेल एड्रेस</strong> — आपका अकाउंट बनाने और मैनेज करने के लिए।</li>
+      <li><strong>पासवर्ड</strong> — एन्क्रिप्टेड फॉर्म में स्टोर किया जाता है। कभी भी प्लेन टेक्स्ट में नहीं।</li>
+      <li><strong>सोशल लॉगिन</strong> — Google या Apple लॉगिन उपयोग करने पर, हम उनकी नीतियों के अनुसार आपका नाम और ईमेल प्राप्त करते हैं।</li>
+      <li><strong>प्रेफरेंस</strong> — ऐप में सेव की गई सेटिंग्स, जैसे पसंदीदा स्पोर्ट्स और नोटिफिकेशन प्रेफरेंस।</li>
+    </ul>
+    <div class="subsection-title">2.2 ऑटोमैटिकली एकत्र किया गया डेटा</div>
+    <ul class="policy-list">
+      <li><strong>डिवाइस आइडेंटिफायर</strong> — सेशन मैनेज करने और पुश नोटिफिकेशन भेजने के लिए।</li>
+      <li><strong>ऑपरेटिंग सिस्टम और वर्शन</strong> — कंपेटिबिलिटी सुनिश्चित करने और एरर ठीक करने के लिए।</li>
+      <li><strong>यूसेज हिस्ट्री</strong> — देखे गए सिग्नल और इस्तेमाल की गई फीचर्स, केवल प्रोडक्ट बेहतर बनाने के लिए।</li>
+      <li><strong>डायग्नोस्टिक डेटा</strong> — बग्स पहचानने और ठीक करने के लिए अनोनिमस टेक्निकल लॉग्स।</li>
+    </ul>
+    <div class="subsection-title">2.3 थर्ड-पार्टी डेटा</div>
+    <ul class="policy-list">
+      <li><strong>Firebase (Google)</strong> — ऑथेंटिकेशन, डेटाबेस और पुश नोटिफिकेशन।</li>
+      <li><strong>स्पोर्ट्स डेटा API</strong> — सिग्नल जनरेट करने के लिए बाहरी सोर्सेज। हम इन प्रोवाइडर्स के साथ पर्सनल डेटा शेयर नहीं करते।</li>
+      <li><strong>पेमेंट प्रोसेसर</strong> — Apple, Google, RevenueCat या Stripe। TheAce कार्ड या बैंकिंग जानकारी स्टोर नहीं करता।</li>
+    </ul>
+  </div>
+
+  <div class="section" id="hi-3">
+    <div class="section-num">03</div>
+    <div class="section-title">हम आपके डेटा का उपयोग कैसे करते हैं</div>
+    <ul class="policy-list">
+      <li>आपका यूजर अकाउंट बनाना और मैनेज करना।</li>
+      <li>आपको स्पोर्ट्स सिग्नल और ऐप कंटेंट डिलीवर करना।</li>
+      <li>आपकी सहमति से मैचेस और रिलेवेंट सिग्नल के बारे में पुश नोटिफिकेशन भेजना।</li>
+      <li>आपकी सब्सक्रिप्शन मैनेज करना और पेमेंट प्रोसेस करना।</li>
+      <li>अनोनिमस यूसेज पैटर्न के आधार पर मशीन लर्निंग मॉडल बेहतर बनाना।</li>
+      <li>टेक्निकल प्रॉब्लम्स सॉल्व करना और प्लेटफॉर्म सिक्योरिटी सुनिश्चित करना।</li>
+      <li>लागू कानूनी दायित्वों का पालन करना।</li>
+    </ul>
+    <div class="highlight"><strong>महत्वपूर्ण:</strong> हम आपके डेटा का उपयोग थर्ड-पार्टी विज्ञापन के लिए नहीं करते और न ही इसे किसी बाहरी कंपनी को बेचते हैं।</div>
+  </div>
+
+  <div class="section" id="hi-4">
+    <div class="section-num">04</div>
+    <div class="section-title">डेटा प्रोसेसिंग का कानूनी आधार</div>
+    <ul class="policy-list">
+      <li><strong>कॉन्ट्रैक्ट परफॉर्मेंस</strong> — रजिस्ट्रेशन के समय रिक्वेस्ट की गई सर्विसेज प्रदान करने के लिए।</li>
+      <li><strong>कंसेंट</strong> — पुश नोटिफिकेशन और मार्केटिंग कम्युनिकेशन के लिए, जिसे कभी भी रिवोक किया जा सकता है।</li>
+      <li><strong>लेजिटिमेट इंटरेस्ट</strong> — प्रोडक्ट बेहतर बनाने, सिक्योरिटी सुनिश्चित करने और फ्रॉड रोकने के लिए।</li>
+      <li><strong>कानूनी दायित्व</strong> — जब कानून को जानकारी रिटेन या डिस्क्लोज करने की जरूरत हो।</li>
+    </ul>
+  </div>
+
+  <div class="section" id="hi-5">
+    <div class="section-num">05</div>
+    <div class="section-title">डेटा साझाकरण</div>
+    <p>TheAce आपका पर्सनल डेटा न बेचता है, न किराए पर देता है, न कमर्शियलाइज करता है। हम केवल निम्नलिखित मामलों में जानकारी शेयर करते हैं:</p>
+    <ul class="policy-list">
+      <li><strong>टेक्नोलॉजी प्रोवाइडर्स</strong> — Firebase (Google) ऑथेंटिकेशन और डेटाबेस के लिए।</li>
+      <li><strong>पेमेंट प्रोसेसर्स</strong> — Apple, Google, RevenueCat या Stripe सब्सक्रिप्शन मैनेज करने के लिए।</li>
+      <li><strong>कानूनी अथॉरिटीज</strong> — जब कानून या कोर्ट ऑर्डर से जरूरी हो।</li>
+      <li><strong>कॉर्पोरेट ट्रांजैक्शन</strong> — मर्जर या एक्विजिशन की स्थिति में, आपका डेटा नए ऑपरेटर को ट्रांसफर हो सकता है।</li>
+    </ul>
+  </div>
+
+  <div class="section" id="hi-6">
+    <div class="section-num">06</div>
+    <div class="section-title">डेटा प्रतिधारण</div>
+    <ul class="policy-list">
+      <li><strong>अकाउंट डेटा</strong> — जब तक आपका अकाउंट एक्टिव है। डिलीट करने पर 30 दिनों में डेटा मिटा दिया जाएगा।</li>
+      <li><strong>अनोनिमस यूसेज डेटा</strong> — स्टैटिस्टिकल एनालिसिस के लिए अनिश्चित काल तक रखा जा सकता है।</li>
+      <li><strong>ट्रांजैक्शन डेटा</strong> — लागू टैक्स कानून द्वारा आवश्यक अवधि के लिए।</li>
+    </ul>
+  </div>
+
+  <div class="section" id="hi-7">
+    <div class="section-num">07</div>
+    <div class="section-title">आपके अधिकार</div>
+    <ul class="policy-list">
+      <li><strong>एक्सेस</strong> — हमारे पास मौजूद आपके पर्सनल डेटा की कॉपी मांगना।</li>
+      <li><strong>रेक्टिफिकेशन</strong> — गलत या अधूरे डेटा को सही करवाना।</li>
+      <li><strong>इरेजर</strong> — कानूनी दायित्वों के अधीन, अपना डेटा डिलीट करवाना।</li>
+      <li><strong>पोर्टेबिलिटी</strong> — स्ट्रक्चर्ड, मशीन-रीडेबल फॉर्मेट में अपना डेटा प्राप्त करना।</li>
+      <li><strong>ऑब्जेक्शन</strong> — लेजिटिमेट इंटरेस्ट पर आधारित प्रोसेसिंग पर आपत्ति करना।</li>
+      <li><strong>कंसेंट विदड्रॉ</strong> — किसी भी समय नोटिफिकेशन या मार्केटिंग की सहमति वापस लेना।</li>
+    </ul>
+    <p>इन अधिकारों का उपयोग करने के लिए हमें <strong>cscpineda@gmail.com</strong> पर संपर्क करें। हम 30 दिनों में जवाब देंगे।</p>
+  </div>
+
+  <div class="section" id="hi-8">
+    <div class="section-num">08</div>
+    <div class="section-title">डेटा सुरक्षा</div>
+    <ul class="policy-list">
+      <li><strong>ट्रांजिट एन्क्रिप्शन</strong> — सभी कम्युनिकेशन HTTPS/TLS का उपयोग करती हैं।</li>
+      <li><strong>रेस्ट एन्क्रिप्शन</strong> — हमारे डेटाबेस में सेंसिटिव डेटा एन्क्रिप्टेड है।</li>
+      <li><strong>सिक्योर ऑथेंटिकेशन</strong> — पासवर्ड सिक्योर हैश फंक्शन से स्टोर किए जाते हैं।</li>
+      <li><strong>रिस्ट्रिक्टेड एक्सेस</strong> — केवल ऑथराइज्ड पर्सनल यूजर डेटा एक्सेस कर सकता है।</li>
+      <li><strong>सिक्योरिटी मॉनिटरिंग</strong> — हम सस्पेक्टेड एक्टिविटी के लिए अपना इंफ्रास्ट्रक्चर मॉनिटर करते हैं।</li>
+    </ul>
+  </div>
+
+  <div class="section" id="hi-9">
+    <div class="section-num">09</div>
+    <div class="section-title">अंतर्राष्ट्रीय डेटा स्थानांतरण</div>
+    <p>आपका डेटा आपके देश के बाहर सर्वर पर प्रोसेस हो सकता है, जिसमें अमेरिका भी शामिल है जहां Firebase (Google) सर्वर होस्ट हैं। हम उचित सुरक्षा उपाय अपनाते हैं ताकि आपका डेटा पर्याप्त रूप से सुरक्षित रहे।</p>
+  </div>
+
+  <div class="section" id="hi-10">
+    <div class="section-num">10</div>
+    <div class="section-title">नाबालिग</div>
+    <p>TheAce 18 वर्ष से कम आयु के व्यक्तियों के लिए नहीं है। हम जानबूझकर नाबालिगों का डेटा एकत्र नहीं करते। यदि आपको लगता है कि आपके बच्चे ने हमें पर्सनल डेटा दिया है, तो cscpineda@gmail.com पर संपर्क करें।</p>
+  </div>
+
+  <div class="section" id="hi-11">
+    <div class="section-num">11</div>
+    <div class="section-title">पुश नोटिफिकेशन</div>
+    <p>आपकी सहमति से, TheAce आपको स्पोर्ट्स सिग्नल, मैच रिजल्ट और अपडेट के बारे में पुश नोटिफिकेशन भेज सकता है। आप इन्हें कभी भी डिवाइस सेटिंग्स या ऐप से डिसेबल कर सकते हैं।</p>
+  </div>
+
+  <div class="section" id="hi-12">
+    <div class="section-num">12</div>
+    <div class="section-title">कुकीज़ और समान तकनीकें</div>
+    <p>TheAce का मोबाइल ऐप वेब ट्रैकिंग कुकीज़ का उपयोग नहीं करता। हम सेशन टोकन और डिवाइस आइडेंटिफायर का उपयोग करते हैं ताकि आपकी सेशन एक्टिव रहे और ऐप सही तरह काम करे।</p>
+  </div>
+
+  <div class="section" id="hi-13">
+    <div class="section-num">13</div>
+    <div class="section-title">नीति में बदलाव</div>
+    <p>हम समय-समय पर इस गोपनीयता नीति को अपडेट कर सकते हैं। महत्वपूर्ण बदलावों के समय, हम ऐप के माध्यम से या ईमेल से कम से कम 30 दिन पहले आपको सूचित करेंगे।</p>
+  </div>
+
+  <div class="section" id="hi-14">
+    <div class="section-num">14</div>
+    <div class="section-title">संपर्क</div>
+    <div class="contact-box">
+      <p>इस गोपनीयता नीति के बारे में प्रश्नों या अनुरोधों के लिए:</p>
+      <br>
+      <p>📧 <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a></p>
+      <p>🌐 <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy/</a></p>
+      <br>
+      <p>हम 30 कार्य दिवसों के भीतर जवाब देंगे।</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ==================== ENGLISH GB ==================== -->
+<div class="content" id="lang-en-gb">
+<div class="container">
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#engb-1">Introduction</a></li>
+      <li><a href="#engb-2">Data We Collect</a></li>
+      <li><a href="#engb-3">How We Use Your Data</a></li>
+      <li><a href="#engb-4">Legal Basis for Processing</a></li>
+      <li><a href="#engb-5">Who We Share Your Data With</a></li>
+      <li><a href="#engb-6">Data Retention</a></li>
+      <li><a href="#engb-7">Your Rights</a></li>
+      <li><a href="#engb-8">Data Security</a></li>
+      <li><a href="#engb-9">International Data Transfers</a></li>
+      <li><a href="#engb-10">Minors</a></li>
+      <li><a href="#engb-11">Push Notifications</a></li>
+      <li><a href="#engb-12">Cookies and Similar Technologies</a></li>
+      <li><a href="#engb-13">Changes to This Policy</a></li>
+      <li><a href="#engb-14">Contact</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="engb-1">
+    <div class="section-num">01</div>
+    <div class="section-title">Introduction</div>
+    <p>TheAce ("we", "our" or "the app") is a sports intelligence platform that provides signals and predictions based on machine learning and artificial intelligence models. This Privacy Policy describes how we collect, use, store and protect your personal information when you use our mobile application TheAce: Sports Signals.</p>
+    <p>By downloading, registering or using TheAce, you agree to the practices described in this policy. This policy complies with the UK General Data Protection Regulation (UK GDPR), the Data Protection Act 2018, and other applicable legislation.</p>
+  </div>
+
+  <div class="section" id="engb-2">
+    <div class="section-num">02</div>
+    <div class="section-title">Data We Collect</div>
+    <div class="subsection-title">2.1 Data You Provide to Us</div>
+    <ul class="policy-list">
+      <li><strong>Email address</strong> — used to create and manage your account.</li>
+      <li><strong>Password</strong> — stored in encrypted form. Never stored in plain text.</li>
+      <li><strong>Social login</strong> — if you use Google or Apple login, we receive your name and email in accordance with their privacy policies.</li>
+      <li><strong>Preferences</strong> — settings you save in the app, such as favourite sports and notification preferences.</li>
+    </ul>
+    <div class="subsection-title">2.2 Data We Collect Automatically</div>
+    <ul class="policy-list">
+      <li><strong>Device identifier</strong> — to manage sessions and send push notifications.</li>
+      <li><strong>Operating system and app version</strong> — to ensure compatibility and resolve technical issues.</li>
+      <li><strong>Usage history</strong> — signals viewed and features used, solely to improve the product.</li>
+      <li><strong>Diagnostic data</strong> — anonymous technical logs to identify and fix bugs.</li>
+    </ul>
+    <div class="subsection-title">2.3 Third-Party Data</div>
+    <ul class="policy-list">
+      <li><strong>Firebase (Google)</strong> — authentication, database and push notifications.</li>
+      <li><strong>Sports data API</strong> — external sources used to generate signals. We do not share personal user data with these providers.</li>
+      <li><strong>Payment processors</strong> — Apple, Google, RevenueCat or Stripe as applicable. TheAce does not store card details or banking information.</li>
+    </ul>
+    <p>We do not collect sensitive personal data such as health information, ethnic origin, religious beliefs, sexual orientation or biometric data.</p>
+  </div>
+
+  <div class="section" id="engb-3">
+    <div class="section-num">03</div>
+    <div class="section-title">How We Use Your Data</div>
+    <ul class="policy-list">
+      <li>Create and manage your user account.</li>
+      <li>Deliver sports signals and app content to you.</li>
+      <li>Send push notifications about matches and relevant signals, with your consent.</li>
+      <li>Manage your subscription and process payments.</li>
+      <li>Improve our machine learning model using anonymous usage patterns.</li>
+      <li>Resolve technical issues and ensure platform security.</li>
+      <li>Comply with applicable legal obligations.</li>
+    </ul>
+    <div class="highlight"><strong>Important:</strong> We do not use your data for third-party advertising, nor do we sell it to any external company.</div>
+  </div>
+
+  <div class="section" id="engb-4">
+    <div class="section-num">04</div>
+    <div class="section-title">Legal Basis for Processing</div>
+    <p>We process your personal data under the following lawful bases as set out in the UK GDPR:</p>
+    <ul class="policy-list">
+      <li><strong>Performance of a contract</strong> — to provide the services you requested when registering.</li>
+      <li><strong>Consent</strong> — for push notifications and marketing communications, revocable at any time.</li>
+      <li><strong>Legitimate interests</strong> — to improve the product, ensure security and prevent fraud.</li>
+      <li><strong>Legal obligation</strong> — when required by law to retain or disclose information.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="engb-5">
+    <div class="section-num">05</div>
+    <div class="section-title">Who We Share Your Data With</div>
+    <p>TheAce does not sell, rent or commercialise your personal data. We only share information in the following circumstances:</p>
+    <ul class="policy-list">
+      <li><strong>Technology providers</strong> — Firebase (Google) for authentication and database, necessary for the app to function.</li>
+      <li><strong>Payment processors</strong> — Apple, Google, RevenueCat or Stripe to manage subscriptions.</li>
+      <li><strong>Legal authorities</strong> — when required by law or court order, we will disclose the minimum necessary information.</li>
+      <li><strong>Corporate transactions</strong> — in the event of a merger or acquisition, your data may be transferred to the new operator, who will be bound by this policy.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="engb-6">
+    <div class="section-num">06</div>
+    <div class="section-title">Data Retention</div>
+    <ul class="policy-list">
+      <li><strong>Account data</strong> — whilst your account is active. Upon deletion, we will erase your data within 30 days.</li>
+      <li><strong>Anonymous usage data</strong> — may be retained indefinitely for statistical analysis.</li>
+      <li><strong>Transaction data</strong> — retained for the period required by applicable tax law (typically 6 years under HMRC guidelines).</li>
+    </ul>
+  </div>
+
+  <div class="section" id="engb-7">
+    <div class="section-num">07</div>
+    <div class="section-title">Your Rights</div>
+    <p>Under UK GDPR, you have the following rights in relation to your personal data:</p>
+    <ul class="policy-list">
+      <li><strong>Right of access</strong> — request a copy of the personal data we hold about you.</li>
+      <li><strong>Right to rectification</strong> — ask us to correct inaccurate or incomplete data.</li>
+      <li><strong>Right to erasure</strong> — request deletion of your data, subject to legal obligations.</li>
+      <li><strong>Right to data portability</strong> — request your data in a structured, machine-readable format.</li>
+      <li><strong>Right to object</strong> — object to processing based on legitimate interests.</li>
+      <li><strong>Right to withdraw consent</strong> — revoke consent for notifications or marketing at any time.</li>
+      <li><strong>Right to restriction</strong> — request that we limit processing in certain circumstances.</li>
+    </ul>
+    <p>To exercise these rights, contact us at <strong>cscpineda@gmail.com</strong>. We will respond within 30 days. If you are dissatisfied with our response, you have the right to lodge a complaint with the Information Commissioner's Office (ICO) at ico.org.uk.</p>
+  </div>
+
+  <div class="section" id="engb-8">
+    <div class="section-num">08</div>
+    <div class="section-title">Data Security</div>
+    <ul class="policy-list">
+      <li><strong>Encryption in transit</strong> — all communications use HTTPS/TLS.</li>
+      <li><strong>Encryption at rest</strong> — sensitive data is encrypted in our database.</li>
+      <li><strong>Secure authentication</strong> — passwords stored using secure hash functions.</li>
+      <li><strong>Restricted access</strong> — only authorised personnel may access user data.</li>
+      <li><strong>Security monitoring</strong> — we monitor our infrastructure for suspicious activity.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="engb-9">
+    <div class="section-num">09</div>
+    <div class="section-title">International Data Transfers</div>
+    <p>Your data may be processed on servers outside the United Kingdom, including the United States where Firebase (Google) servers are hosted. These transfers are carried out under appropriate safeguards, including the International Data Transfer Agreements (IDTAs) approved by the ICO.</p>
+  </div>
+
+  <div class="section" id="engb-10">
+    <div class="section-num">10</div>
+    <div class="section-title">Minors</div>
+    <p>TheAce is not directed at persons under 18 years of age. We do not knowingly collect data from minors. If you believe your child has provided us with personal data, please contact us at cscpineda@gmail.com and we will delete it promptly.</p>
+  </div>
+
+  <div class="section" id="engb-11">
+    <div class="section-num">11</div>
+    <div class="section-title">Push Notifications</div>
+    <p>With your consent, TheAce may send you push notifications about sports signals, match results and product updates. You may disable these at any time via your device settings or within the app.</p>
+  </div>
+
+  <div class="section" id="engb-12">
+    <div class="section-num">12</div>
+    <div class="section-title">Cookies and Similar Technologies</div>
+    <p>TheAce's mobile app does not use web tracking cookies. We use session tokens and device identifiers to maintain your session and ensure the app functions correctly.</p>
+  </div>
+
+  <div class="section" id="engb-13">
+    <div class="section-num">13</div>
+    <div class="section-title">Changes to This Policy</div>
+    <p>We may update this Privacy Policy from time to time. When we make material changes, we will notify you through the app or by email at least 30 days in advance. The date of the last update will always be visible at the top of this document.</p>
+  </div>
+
+  <div class="section" id="engb-14">
+    <div class="section-num">14</div>
+    <div class="section-title">Contact</div>
+    <div class="contact-box">
+      <p>For questions or requests regarding this Privacy Policy:</p>
+      <br>
+      <p>📧 <a href="mailto:cscpineda@gmail.com">cscpineda@gmail.com</a></p>
+      <p>🌐 <a href="https://spineda31.github.io/the-ace-privacy/" target="_blank">spineda31.github.io/the-ace-privacy/</a></p>
+      <br>
+      <p>We will respond within 30 working days. You may also raise concerns with the Information Commissioner's Office (ICO): <a href="https://ico.org.uk" target="_blank" style="color:var(--accent)">ico.org.uk</a></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="brand">THE ACE</div>
+  <p>Señales Deportivas · Sports Signals · Sinais Esportivos</p>
+  <p class="tagline">El deporte se ve. TheAce lo entiende.</p>
+</footer>
+
+<script>
+const heroTitles = {
+  es: 'Política de Privacidad',
+  en: 'Privacy Policy',
+  'pt-br': 'Política de Privacidade',
+  'pt-pt': 'Política de Privacidade',
+  de: 'Datenschutzrichtlinie',
+  fr: 'Politique de Confidentialité',
+  it: 'Informativa sulla Privacy',
+  zh: '隐私政策',
+  hi: 'गोपनीयता नीति',
+  'en-gb': 'Privacy Policy'
+};
+
+const heroMeta = {
+  es: 'Última actualización: Abril 2026',
+  en: 'Last updated: April 2026',
+  'pt-br': 'Última atualização: Abril de 2026',
+  'pt-pt': 'Última atualização: Abril de 2026',
+  de: 'Letzte Aktualisierung: April 2026',
+  fr: 'Dernière mise à jour : Avril 2026',
+  it: 'Ultimo aggiornamento: Aprile 2026',
+  zh: '最后更新：2026年4月',
+  hi: 'अंतिम अपडेट: अप्रैल 2026',
+  'en-gb': 'Last updated: April 2026'
+};
+
+function setLang(lang) {
+  document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+  document.querySelector(`[onclick="setLang('${lang}')"]`).classList.add('active');
+  document.getElementById('hero-title').textContent = heroTitles[lang] || heroTitles['en'];
+  document.getElementById('hero-meta').textContent = heroMeta[lang] || heroMeta['en'];
+  document.documentElement.lang = lang;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
 </body>
 </html>
